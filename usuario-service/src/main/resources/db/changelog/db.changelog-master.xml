@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!-- 1. Crear tabla rol -->
+    <changeSet id="1" author="gabriel">
+        <createTable tableName="rol">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- 2. Insertar roles -->
+    <changeSet id="2" author="gabriel">
+        <insert tableName="rol">
+            <column name="nombre" value="ADMIN"/>
+        </insert>
+        <insert tableName="rol">
+            <column name="nombre" value="CLIENTE"/>
+        </insert>
+        <insert tableName="rol">
+            <column name="nombre" value="EMPLEADO"/>
+        </insert>
+    </changeSet>
+
+    <!-- 3. Crear tabla usuarios -->
+    <changeSet id="3" author="gabriel">
+        <createTable tableName="usuarios">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)"/>
+            <column name="correo" type="VARCHAR(100)"/>
+            <column name="password" type="VARCHAR(100)"/>
+            <column name="rol_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+
+    <!-- 4. Relación FK -->
+    <changeSet id="4" author="gabriel">
+        <addForeignKeyConstraint 
+            baseTableName="usuarios"
+            baseColumnNames="rol_id"
+            referencedTableName="rol"
+            referencedColumnNames="id"
+            constraintName="fk_usuario_rol"/>
+    </changeSet>
+
+</databaseChangeLog>

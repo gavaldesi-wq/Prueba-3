@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!-- Crear tabla sala -->
+    <changeSet id="1" author="gabriel">
+        <createTable tableName="sala">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="capacidad" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_sala" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Insertar salas iniciales -->
+    <changeSet id="2" author="gabriel">
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 1 2D"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="2D"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 2 2D"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="2D"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 1 3D"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="3D"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 2 3D"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="3D"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 1 IMAX"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="IMAX"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 2 IMAX"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="IMAX"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 1 4D"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="4D"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 2 4D"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="4D"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 1 4DX"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="4DX"/>
+        </insert>
+        <insert tableName="sala">
+            <column name="nombre" value="Sala 2 4DX"/>
+            <column name="capacidad" value="100"/>
+            <column name="tipo_sala" value="4DX"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

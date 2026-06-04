@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+    
+    <!-- Insertar géneros iniciales -->
+    <changeSet id="3" author="cine-system">
+        <!-- Insertar 10 géneros de películas -->
+        <insert tableName="generos">
+            <column name="nombre" value="Acción"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Comedia"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Drama"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Ciencia Ficción"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Terror"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Romance"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Animación"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Documental"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Aventura"/>
+        </insert>
+        <insert tableName="generos">
+            <column name="nombre" value="Suspenso"/>
+        </insert>
+    </changeSet>
+    
+    <!-- Insertar 10 películas iniciales -->
+    <changeSet id="4" author="cine-system">
+        <insert tableName="peliculas">
+            <column name="titulo" value="The Avengers"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="143"/>
+            <column name="fecha_estreno" value="2012-05-04"/>
+            <column name="genero_id" value="1"/>  <!-- Acción -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="The Hangover"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="100"/>
+            <column name="fecha_estreno" value="2009-06-05"/>
+            <column name="genero_id" value="2"/>  <!-- Comedia -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="The Shawshank Redemption"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="142"/>
+            <column name="fecha_estreno" value="1994-09-23"/>
+            <column name="genero_id" value="3"/>  <!-- Drama -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="Inception"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="148"/>
+            <column name="fecha_estreno" value="2010-07-16"/>
+            <column name="genero_id" value="4"/>  <!-- Ciencia Ficción -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="The Conjuring"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="112"/>
+            <column name="fecha_estreno" value="2013-07-19"/>
+            <column name="genero_id" value="5"/>  <!-- Terror -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="Titanic"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="195"/>
+            <column name="fecha_estreno" value="1997-12-19"/>
+            <column name="genero_id" value="6"/>  <!-- Romance -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="Toy Story"/>
+            <column name="clasificacion" value="G"/>
+            <column name="duracion" value="81"/>
+            <column name="fecha_estreno" value="1995-11-22"/>
+            <column name="genero_id" value="7"/>  <!-- Animación -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="Planet Earth"/>
+            <column name="clasificacion" value="G"/>
+            <column name="duracion" value="550"/>
+            <column name="fecha_estreno" value="2006-03-05"/>
+            <column name="genero_id" value="8"/>  <!-- Documental -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="Jurassic Park"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="127"/>
+            <column name="fecha_estreno" value="1993-06-11"/>
+            <column name="genero_id" value="9"/>  <!-- Aventura -->
+        </insert>
+        
+        <insert tableName="peliculas">
+            <column name="titulo" value="The Silence of the Lambs"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="118"/>
+            <column name="fecha_estreno" value="1991-02-14"/>
+            <column name="genero_id" value="10"/>  <!-- Suspenso -->
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>

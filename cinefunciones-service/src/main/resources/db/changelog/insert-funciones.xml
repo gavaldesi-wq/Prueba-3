@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="2" author="gabriel">
+
+        <insert tableName="funcion">
+            <column name="pelicula_id" value="1"/>
+            <column name="pelicula_titulo" value="John Wick"/>
+            <column name="sala_id" value="5"/>
+            <column name="sala_nombre" value="Sala 1 IMAX"/>
+            <column name="sala_tipo" value="IMAX"/>
+            <column name="fecha" value="2026-05-10"/>
+            <column name="hora_inicio" value="20:00:00"/>
+            <column name="hora_fin" value="21:41:00"/>
+            <column name="precio_general" value="8000"/>
+            <column name="precio_vip" value="12000"/>
+            <column name="estado" value="DISPONIBLE"/>
+            <column name="idioma" value="ESPAÑOL"/>
+            <column name="formato" value="IMAX"/>
+        </insert>
+
+        <insert tableName="funcion">
+            <column name="pelicula_id" value="2"/>
+            <column name="pelicula_titulo" value="Avengers: Endgame"/>
+            <column name="sala_id" value="6"/>
+            <column name="sala_nombre" value="Sala 2 IMAX"/>
+            <column name="sala_tipo" value="IMAX"/>
+            <column name="fecha" value="2026-05-11"/>
+            <column name="hora_inicio" value="18:00:00"/>
+            <column name="hora_fin" value="21:01:00"/>
+            <column name="precio_general" value="9000"/>
+            <column name="precio_vip" value="14000"/>
+            <column name="estado" value="DISPONIBLE"/>
+            <column name="idioma" value="SUBTITULADA"/>
+            <column name="formato" value="IMAX"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

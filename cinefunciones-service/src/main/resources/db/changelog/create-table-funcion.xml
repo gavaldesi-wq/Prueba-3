@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="1" author="gabriel">
+
+        <createTable tableName="funcion">
+
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="pelicula_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="pelicula_titulo" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sala_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sala_nombre" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sala_tipo" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="fecha" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="hora_inicio" type="TIME">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="hora_fin" type="TIME">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="precio_general" type="DECIMAL(10,2)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="precio_vip" type="DECIMAL(10,2)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="estado" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="idioma" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="formato" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

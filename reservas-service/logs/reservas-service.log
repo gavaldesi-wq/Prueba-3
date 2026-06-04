@@ -1,0 +1,164 @@
+2026-06-04T19:08:41.772-04:00  INFO 20668 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 20668 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
+2026-06-04T19:08:41.777-04:00 DEBUG 20668 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T19:08:41.777-04:00  INFO 20668 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T19:08:42.174-04:00  INFO 20668 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T19:08:42.207-04:00  INFO 20668 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2026-06-04T19:08:42.504-04:00  INFO 20668 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-06-04T19:08:42.513-04:00  INFO 20668 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T19:08:42.513-04:00  INFO 20668 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T19:08:42.546-04:00  INFO 20668 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T19:08:42.546-04:00  INFO 20668 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 729 ms
+2026-06-04T19:08:42.626-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T19:08:42.733-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c770db4
+2026-06-04T19:08:42.735-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T19:08:43.134-04:00  INFO 20668 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-04T19:08:43.185-04:00  INFO 20668 --- [reservas-service] [main] liquibase.changelog                      : Change failed validation!
+2026-06-04T19:08:43.187-04:00  INFO 20668 --- [reservas-service] [main] liquibase.command                        : Logging exception.
+2026-06-04T19:08:43.187-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Details
+2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ValidationFailedException
+2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Primary Source:  4.31.1
+2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.command                        : Command execution complete
+2026-06-04T19:08:44.329-04:00  WARN 20668 --- [reservas-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+2026-06-04T19:08:44.330-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-04T19:08:44.334-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-04T19:08:44.338-04:00  INFO 20668 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-04T19:08:44.344-04:00  INFO 20668 --- [reservas-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-04T19:08:44.355-04:00 ERROR 20668 --- [reservas-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:974) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.reservas.ReservasServiceApplication.main(ReservasServiceApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 10 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 17 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	... 19 common frames omitted
+Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
+
+	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:384) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:88) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
+	... 37 common frames omitted
+
+2026-06-04T19:16:22.394-04:00  INFO 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 17416 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
+2026-06-04T19:16:22.402-04:00 DEBUG 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T19:16:22.403-04:00  INFO 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T19:16:23.128-04:00  INFO 17416 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T19:16:23.184-04:00  INFO 17416 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2026-06-04T19:16:23.669-04:00  INFO 17416 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-06-04T19:16:23.684-04:00  INFO 17416 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T19:16:23.685-04:00  INFO 17416 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T19:16:23.743-04:00  INFO 17416 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T19:16:23.744-04:00  INFO 17416 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1296 ms
+2026-06-04T19:16:23.896-04:00  INFO 17416 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T19:16:24.045-04:00  INFO 17416 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0a2638
+2026-06-04T19:16:24.046-04:00  INFO 17416 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T19:16:24.467-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Creating database history table with name: db_reservas.databasechangelog
+2026-06-04T19:16:24.843-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-04T19:16:24.855-04:00  INFO 17416 --- [reservas-service] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-04T19:16:25.194-04:00  WARN 17416 --- [reservas-service] [main] liquibase.executor                       : Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+2026-06-04T19:16:25.274-04:00  INFO 17416 --- [reservas-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-04T19:16:25.275-04:00  INFO 17416 --- [reservas-service] [main] liquibase.command                        : Using deploymentId: 0614983880
+2026-06-04T19:16:25.277-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-04T19:16:25.292-04:00  INFO 17416 --- [reservas-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-master.xml::1::gabriel
+2026-06-04T19:16:25.413-04:00  WARN 17416 --- [reservas-service] [main] liquibase.executor                       : Name 'PK_RESERVAS' ignored for PRIMARY key.
+2026-06-04T19:16:25.413-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Table reservas created
+2026-06-04T19:16:25.414-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-master.xml::1::gabriel ran successfully in 121ms
+2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Run:                          1
+2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Previously run:               0
+2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : -------------------------------
+2026-06-04T19:16:25.446-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
+2026-06-04T19:16:25.446-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Update summary generated
+2026-06-04T19:16:25.448-04:00  INFO 17416 --- [reservas-service] [main] liquibase.command                        : Update command completed successfully.
+2026-06-04T19:16:25.448-04:00  INFO 17416 --- [reservas-service] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2026-06-04T19:16:25.472-04:00  INFO 17416 --- [reservas-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-06-04T19:16:25.473-04:00  INFO 17416 --- [reservas-service] [main] liquibase.command                        : Command execution complete
+2026-06-04T19:16:26.970-04:00  INFO 17416 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T19:16:27.004-04:00  INFO 17416 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T19:16:27.023-04:00  INFO 17416 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T19:16:27.183-04:00  INFO 17416 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T19:16:27.223-04:00  WARN 17416 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T19:16:27.233-04:00  INFO 17416 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T19:16:27.730-04:00  INFO 17416 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T19:16:27.732-04:00  INFO 17416 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T19:16:27.956-04:00  WARN 17416 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T19:16:28.157-04:00  INFO 17416 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-06-04T19:16:28.161-04:00  INFO 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.233 seconds (process running for 6.593)
+2026-06-04T19:16:42.717-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T19:16:42.717-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T19:16:42.717-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T19:16:42.742-04:00  WARN 17416 --- [reservas-service] [http-nio-8085-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "reservar"]
+2026-06-04T19:17:57.395-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-2] c.r.controller.ReservasController        : POST /api/reservas/comprar - correo=gabriel@gmail.com funcionId=1
+2026-06-04T19:17:57.934-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-2] c.r.controller.ReservasController        : Reserva creada exitosamente id=1

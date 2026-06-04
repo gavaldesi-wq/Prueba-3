@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!-- Insertar géneros iniciales -->
+    <changeSet id="1" author="system">
+        <insert tableName="genero">
+            <column name="nombre" value="Acción"/>
+        </insert>
+        <insert tableName="genero">
+            <column name="nombre" value="Comedia"/>
+        </insert>
+        <insert tableName="genero">
+            <column name="nombre" value="Drama"/>
+        </insert>
+    </changeSet>
+
+    <!-- Insertar películas iniciales -->
+    <changeSet id="2" author="system">
+        <insert tableName="pelicula">
+            <column name="titulo" value="John Wick"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="101"/>
+            <column name="fecha_estreno" value="2014-10-24"/>
+            <column name="genero_id" value="1"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="Avengers: Endgame"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="181"/>
+            <column name="fecha_estreno" value="2019-04-26"/>
+            <column name="genero_id" value="1"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="Me Before You"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="110"/>
+            <column name="fecha_estreno" value="2016-06-03"/>
+            <column name="genero_id" value="3"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="The Hangover"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="100"/>
+            <column name="fecha_estreno" value="2009-06-05"/>
+            <column name="genero_id" value="2"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="Mad Max: Fury Road"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="120"/>
+            <column name="fecha_estreno" value="2015-05-15"/>
+            <column name="genero_id" value="1"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="Superbad"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="113"/>
+            <column name="fecha_estreno" value="2007-08-17"/>
+            <column name="genero_id" value="2"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="The Notebook"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="123"/>
+            <column name="fecha_estreno" value="2004-06-25"/>
+            <column name="genero_id" value="3"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="Guardians of the Galaxy"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="121"/>
+            <column name="fecha_estreno" value="2014-08-01"/>
+            <column name="genero_id" value="1"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="The Grand Budapest Hotel"/>
+            <column name="clasificacion" value="R"/>
+            <column name="duracion" value="99"/>
+            <column name="fecha_estreno" value="2014-03-28"/>
+            <column name="genero_id" value="2"/>
+        </insert>
+        <insert tableName="pelicula">
+            <column name="titulo" value="Forrest Gump"/>
+            <column name="clasificacion" value="PG-13"/>
+            <column name="duracion" value="142"/>
+            <column name="fecha_estreno" value="1994-07-06"/>
+            <column name="genero_id" value="3"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

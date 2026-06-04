@@ -1,0 +1,101 @@
+2026-06-04T19:08:38.620-04:00  INFO 20864 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : Starting UsuarioServiceApplication using Java 25.0.1 with PID 20864 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\usuario-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\usuario-service)
+2026-06-04T19:08:38.625-04:00 DEBUG 20864 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T19:08:38.630-04:00  INFO 20864 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T19:08:39.522-04:00  INFO 20864 --- [usuario-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T19:08:39.618-04:00  INFO 20864 --- [usuario-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2026-06-04T19:08:40.325-04:00  INFO 20864 --- [usuario-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-04T19:08:40.345-04:00  INFO 20864 --- [usuario-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T19:08:40.345-04:00  INFO 20864 --- [usuario-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T19:08:40.416-04:00  INFO 20864 --- [usuario-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T19:08:40.417-04:00  INFO 20864 --- [usuario-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1707 ms
+2026-06-04T19:08:40.557-04:00  INFO 20864 --- [usuario-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T19:08:40.715-04:00  INFO 20864 --- [usuario-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c8f97a7
+2026-06-04T19:08:40.717-04:00  INFO 20864 --- [usuario-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T19:08:41.747-04:00  INFO 20864 --- [usuario-service] [main] liquibase.changelog                      : Reading from db_usuarios.databasechangelog
+2026-06-04T19:08:41.832-04:00  INFO 20864 --- [usuario-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-06-04T19:08:41.834-04:00  INFO 20864 --- [usuario-service] [main] liquibase.changelog                      : Reading from db_usuarios.databasechangelog
+2026-06-04T19:08:41.842-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-04T19:08:41.843-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : Run:                          0
+2026-06-04T19:08:41.843-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : Previously run:               4
+2026-06-04T19:08:41.843-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-04T19:08:41.843-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : -------------------------------
+2026-06-04T19:08:41.844-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : Total change sets:            4
+2026-06-04T19:08:41.844-04:00  INFO 20864 --- [usuario-service] [main] liquibase.util                           : Update summary generated
+2026-06-04T19:08:41.846-04:00  INFO 20864 --- [usuario-service] [main] liquibase.command                        : Command execution complete
+2026-06-04T19:08:43.404-04:00  INFO 20864 --- [usuario-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T19:08:43.449-04:00  INFO 20864 --- [usuario-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T19:08:43.476-04:00  INFO 20864 --- [usuario-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T19:08:43.666-04:00  INFO 20864 --- [usuario-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T19:08:43.710-04:00  WARN 20864 --- [usuario-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T19:08:43.721-04:00  INFO 20864 --- [usuario-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T19:08:44.252-04:00  INFO 20864 --- [usuario-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T19:08:44.255-04:00  INFO 20864 --- [usuario-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T19:08:44.474-04:00  WARN 20864 --- [usuario-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T19:08:44.663-04:00  INFO 20864 --- [usuario-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-06-04T19:08:44.668-04:00  INFO 20864 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : Started UsuarioServiceApplication in 6.555 seconds (process running for 6.992)
+2026-06-04T19:09:33.745-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T19:09:33.745-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T19:09:33.748-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-04T19:09:33.768-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-1] c.usuarios.controller.UsuarioController  : GET /api/usuarios
+2026-06-04T19:09:33.903-04:00 DEBUG 20864 --- [usuario-service] [http-nio-8081-exec-1] c.usuarios.controller.UsuarioController  : Cantidad de usuarios obtenidos: 1
+2026-06-04T19:10:06.322-04:00  WARN 20864 --- [usuario-service] [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-06-04T19:10:20.581-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-3] c.usuarios.controller.UsuarioController  : POST /api/usuarios/login - correo=gabriel@gmail.com
+2026-06-04T19:10:20.672-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-3] com.usuarios.service.UsuarioService      : Login exitoso para: gabriel@gmail.com
+2026-06-04T19:10:20.672-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-3] c.usuarios.controller.UsuarioController  : Login exitoso correo=gabriel@gmail.com
+2026-06-04T19:12:04.032-04:00  INFO 20864 --- [usuario-service] [http-nio-8081-exec-5] c.usuarios.controller.UsuarioController  : GET /api/usuarios
+2026-06-04T19:12:04.035-04:00 DEBUG 20864 --- [usuario-service] [http-nio-8081-exec-5] c.usuarios.controller.UsuarioController  : Cantidad de usuarios obtenidos: 1
+2026-06-04T19:16:22.460-04:00  INFO 19232 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : Starting UsuarioServiceApplication using Java 25.0.1 with PID 19232 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\usuario-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\usuario-service)
+2026-06-04T19:16:22.462-04:00 DEBUG 19232 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T19:16:22.463-04:00  INFO 19232 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T19:16:23.208-04:00  INFO 19232 --- [usuario-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T19:16:23.264-04:00  INFO 19232 --- [usuario-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2026-06-04T19:16:23.742-04:00  INFO 19232 --- [usuario-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-04T19:16:23.760-04:00  INFO 19232 --- [usuario-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T19:16:23.761-04:00  INFO 19232 --- [usuario-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T19:16:23.821-04:00  INFO 19232 --- [usuario-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T19:16:23.821-04:00  INFO 19232 --- [usuario-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1277 ms
+2026-06-04T19:16:23.956-04:00  INFO 19232 --- [usuario-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T19:16:24.091-04:00  INFO 19232 --- [usuario-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c6a5192
+2026-06-04T19:16:24.093-04:00  INFO 19232 --- [usuario-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T19:16:25.080-04:00  INFO 19232 --- [usuario-service] [main] liquibase.changelog                      : Reading from db_usuarios.databasechangelog
+2026-06-04T19:16:25.224-04:00  INFO 19232 --- [usuario-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-06-04T19:16:25.227-04:00  INFO 19232 --- [usuario-service] [main] liquibase.changelog                      : Reading from db_usuarios.databasechangelog
+2026-06-04T19:16:25.233-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-04T19:16:25.233-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : Run:                          0
+2026-06-04T19:16:25.234-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : Previously run:               4
+2026-06-04T19:16:25.234-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-04T19:16:25.234-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : -------------------------------
+2026-06-04T19:16:25.234-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : Total change sets:            4
+2026-06-04T19:16:25.235-04:00  INFO 19232 --- [usuario-service] [main] liquibase.util                           : Update summary generated
+2026-06-04T19:16:25.236-04:00  INFO 19232 --- [usuario-service] [main] liquibase.command                        : Command execution complete
+2026-06-04T19:16:26.801-04:00  INFO 19232 --- [usuario-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T19:16:26.838-04:00  INFO 19232 --- [usuario-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T19:16:26.862-04:00  INFO 19232 --- [usuario-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T19:16:27.042-04:00  INFO 19232 --- [usuario-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T19:16:27.084-04:00  WARN 19232 --- [usuario-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T19:16:27.095-04:00  INFO 19232 --- [usuario-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T19:16:27.643-04:00  INFO 19232 --- [usuario-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T19:16:27.646-04:00  INFO 19232 --- [usuario-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T19:16:27.863-04:00  WARN 19232 --- [usuario-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T19:16:28.091-04:00  INFO 19232 --- [usuario-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-06-04T19:16:28.096-04:00  INFO 19232 --- [usuario-service] [main] com.usuarios.UsuarioServiceApplication   : Started UsuarioServiceApplication in 6.097 seconds (process running for 6.46)
+2026-06-04T19:17:57.446-04:00  INFO 19232 --- [usuario-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T19:17:57.446-04:00  INFO 19232 --- [usuario-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T19:17:57.448-04:00  INFO 19232 --- [usuario-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T19:17:57.507-04:00  INFO 19232 --- [usuario-service] [http-nio-8081-exec-1] c.usuarios.controller.UsuarioController  : POST /api/usuarios/login - correo=gabriel@gmail.com
+2026-06-04T19:17:57.679-04:00  INFO 19232 --- [usuario-service] [http-nio-8081-exec-1] com.usuarios.service.UsuarioService      : Login exitoso para: gabriel@gmail.com
+2026-06-04T19:17:57.679-04:00  INFO 19232 --- [usuario-service] [http-nio-8081-exec-1] c.usuarios.controller.UsuarioController  : Login exitoso correo=gabriel@gmail.com

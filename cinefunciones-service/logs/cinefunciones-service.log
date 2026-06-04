@@ -1,0 +1,54 @@
+2026-06-04T19:08:39.909-04:00  INFO 21436 --- [main] c.c.CinefuncionesServiceApplication      : Starting CinefuncionesServiceApplication using Java 25.0.1 with PID 21436 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\cinefunciones-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\cinefunciones-service)
+2026-06-04T19:08:39.915-04:00 DEBUG 21436 --- [main] c.c.CinefuncionesServiceApplication      : Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-04T19:08:39.916-04:00  INFO 21436 --- [main] c.c.CinefuncionesServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T19:08:40.600-04:00  INFO 21436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T19:08:40.649-04:00  INFO 21436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interfaces.
+2026-06-04T19:08:41.223-04:00  INFO 21436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-06-04T19:08:41.234-04:00  INFO 21436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T19:08:41.234-04:00  INFO 21436 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-04T19:08:41.322-04:00  INFO 21436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T19:08:41.323-04:00  INFO 21436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1327 ms
+2026-06-04T19:08:41.438-04:00  INFO 21436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T19:08:41.552-04:00  INFO 21436 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2007435e
+2026-06-04T19:08:41.554-04:00  INFO 21436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T19:08:41.938-04:00  INFO 21436 --- [main] liquibase.changelog                      : Reading from db_funciones.DATABASECHANGELOG
+2026-06-04T19:08:41.944-04:00  INFO 21436 --- [main] liquibase.executor                       : Changelog query completed.
+2026-06-04T19:08:42.020-04:00  INFO 21436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T19:08:42.064-04:00  INFO 21436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-04T19:08:42.066-04:00  INFO 21436 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2026-06-04T19:08:42.251-04:00  INFO 21436 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T19:08:42.291-04:00  WARN 21436 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2026-06-04T19:08:42.827-04:00  INFO 21436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T19:08:42.830-04:00  INFO 21436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T19:08:43.073-04:00  WARN 21436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T19:08:43.251-04:00  INFO 21436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-06-04T19:08:43.260-04:00  INFO 21436 --- [main] c.c.CinefuncionesServiceApplication      : Started CinefuncionesServiceApplication in 3.88 seconds (process running for 4.5)
+2026-06-04T19:16:23.451-04:00  INFO 23172 --- [main] c.c.CinefuncionesServiceApplication      : Starting CinefuncionesServiceApplication using Java 25.0.1 with PID 23172 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\cinefunciones-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\cinefunciones-service)
+2026-06-04T19:16:23.453-04:00 DEBUG 23172 --- [main] c.c.CinefuncionesServiceApplication      : Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-04T19:16:23.454-04:00  INFO 23172 --- [main] c.c.CinefuncionesServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T19:16:23.957-04:00  INFO 23172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T19:16:23.998-04:00  INFO 23172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2026-06-04T19:16:24.482-04:00  INFO 23172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-06-04T19:16:24.494-04:00  INFO 23172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T19:16:24.495-04:00  INFO 23172 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-04T19:16:24.583-04:00  INFO 23172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T19:16:24.583-04:00  INFO 23172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1090 ms
+2026-06-04T19:16:24.663-04:00  INFO 23172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T19:16:24.763-04:00  INFO 23172 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ed2f2f6
+2026-06-04T19:16:24.765-04:00  INFO 23172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T19:16:25.186-04:00  INFO 23172 --- [main] liquibase.changelog                      : Reading from db_funciones.DATABASECHANGELOG
+2026-06-04T19:16:25.191-04:00  INFO 23172 --- [main] liquibase.executor                       : Changelog query completed.
+2026-06-04T19:16:25.269-04:00  INFO 23172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T19:16:25.317-04:00  INFO 23172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-04T19:16:25.319-04:00  INFO 23172 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2026-06-04T19:16:25.484-04:00  INFO 23172 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T19:16:25.525-04:00  WARN 23172 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2026-06-04T19:16:26.018-04:00  INFO 23172 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T19:16:26.021-04:00  INFO 23172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T19:16:26.229-04:00  WARN 23172 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T19:16:26.378-04:00  INFO 23172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-06-04T19:16:26.381-04:00  INFO 23172 --- [main] c.c.CinefuncionesServiceApplication      : Started CinefuncionesServiceApplication in 3.299 seconds (process running for 3.781)
+2026-06-04T19:17:57.740-04:00  INFO 23172 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T19:17:57.740-04:00  INFO 23172 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T19:17:57.742-04:00  INFO 23172 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-04T19:17:57.762-04:00  INFO 23172 --- [http-nio-8082-exec-1] c.c.controller.FuncionController         : GET /api/funciones/1

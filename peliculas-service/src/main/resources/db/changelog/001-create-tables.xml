@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+    
+    <!-- Creación de la tabla genero -->
+    <changeSet id="1" author="cine-system">
+        <createTable tableName="genero">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+        
+        <!-- Creación de la tabla pelicula -->
+        <createTable tableName="pelicula">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="titulo" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="clasificacion" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="duracion" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fecha_estreno" type="DATE"/>
+            <column name="genero_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    
+</databaseChangeLog>
