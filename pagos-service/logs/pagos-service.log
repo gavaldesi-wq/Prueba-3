@@ -1,0 +1,460 @@
+2026-06-04T21:06:56.001-04:00  INFO 16308 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 16308 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:06:56.003-04:00  INFO 16308 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:06:56.477-04:00  INFO 16308 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:06:56.516-04:00  INFO 16308 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+2026-06-04T21:06:56.822-04:00  INFO 16308 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:06:56.831-04:00  INFO 16308 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:06:56.832-04:00  INFO 16308 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:06:56.865-04:00  INFO 16308 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:06:56.865-04:00  INFO 16308 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 823 ms
+2026-06-04T21:06:56.969-04:00  INFO 16308 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:06:56.995-04:00  INFO 16308 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:06:57.014-04:00  INFO 16308 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:06:57.172-04:00  INFO 16308 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:06:57.189-04:00  INFO 16308 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:06:57.298-04:00  INFO 16308 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8432469
+2026-06-04T21:06:57.299-04:00  INFO 16308 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:06:57.329-04:00  WARN 16308 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:06:57.341-04:00  INFO 16308 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:06:57.779-04:00  INFO 16308 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:06:57.782-04:00  INFO 16308 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:06:57.965-04:00  WARN 16308 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:06:58.147-04:00  INFO 16308 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:06:58.152-04:00  INFO 16308 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 2.503 seconds (process running for 2.755)
+2026-06-04T21:11:48.237-04:00  INFO 20128 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 20128 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:11:48.239-04:00  INFO 20128 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:11:48.991-04:00  INFO 20128 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:11:49.054-04:00  INFO 20128 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2026-06-04T21:11:49.543-04:00  INFO 20128 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:11:49.560-04:00  INFO 20128 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:11:49.560-04:00  INFO 20128 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:11:49.622-04:00  INFO 20128 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:11:49.623-04:00  INFO 20128 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1320 ms
+2026-06-04T21:11:49.775-04:00  INFO 20128 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:11:49.813-04:00  INFO 20128 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:11:49.842-04:00  INFO 20128 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:11:50.152-04:00  INFO 20128 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:11:50.188-04:00  INFO 20128 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:11:50.381-04:00  INFO 20128 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57c6feea
+2026-06-04T21:11:50.384-04:00  INFO 20128 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:11:50.437-04:00  WARN 20128 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:11:50.461-04:00  INFO 20128 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:11:51.034-04:00  INFO 20128 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:11:51.036-04:00  INFO 20128 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:11:51.231-04:00  WARN 20128 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:11:51.467-04:00  INFO 20128 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:11:51.471-04:00  INFO 20128 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.86 seconds (process running for 4.378)
+2026-06-04T21:12:04.494-04:00  INFO 20128 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:12:04.494-04:00  INFO 20128 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:12:04.495-04:00  INFO 20128 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T21:12:04.513-04:00  INFO 20128 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : GET /api/pagos
+2026-06-04T21:12:04.592-04:00  WARN 20128 --- [pagos-service] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
+2026-06-04T21:12:04.592-04:00 ERROR 20128 --- [pagos-service] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'db_pagos.pagos' doesn't exist
+2026-06-04T21:12:04.598-04:00  WARN 20128 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Error obteniendo pagos - JDBC exception executing SQL [select p1_0.id,p1_0.estado,p1_0.metodo_pago,p1_0.monto,p1_0.reserva_id from pagos p1_0] [Table 'db_pagos.pagos' doesn't exist] [n/a]; SQL [n/a]
+2026-06-04T21:12:13.039-04:00  WARN 20128 --- [pagos-service] [http-nio-8086-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-06-04T21:12:18.561-04:00  INFO 20128 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:12:18.733-04:00  WARN 20128 --- [pagos-service] [http-nio-8086-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
+2026-06-04T21:12:18.734-04:00 ERROR 20128 --- [pagos-service] [http-nio-8086-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'db_pagos.pagos' doesn't exist
+2026-06-04T21:12:18.735-04:00  WARN 20128 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : Error procesando pago - could not execute statement [Table 'db_pagos.pagos' doesn't exist] [insert into pagos (estado,metodo_pago,monto,reserva_id) values (?,?,?,?)]; SQL [insert into pagos (estado,metodo_pago,monto,reserva_id) values (?,?,?,?)]
+2026-06-04T21:16:31.377-04:00  INFO 21180 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 21180 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:16:31.380-04:00  INFO 21180 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:16:32.189-04:00  INFO 21180 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:16:32.255-04:00  INFO 21180 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2026-06-04T21:16:32.774-04:00  INFO 21180 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:16:32.787-04:00  INFO 21180 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:16:32.787-04:00  INFO 21180 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:16:32.843-04:00  INFO 21180 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:16:32.844-04:00  INFO 21180 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1408 ms
+2026-06-04T21:16:32.997-04:00  INFO 21180 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:16:33.041-04:00  INFO 21180 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:16:33.077-04:00  INFO 21180 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:16:33.405-04:00  INFO 21180 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:16:33.436-04:00  INFO 21180 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:16:33.681-04:00  INFO 21180 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57c6feea
+2026-06-04T21:16:33.684-04:00  INFO 21180 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:16:33.734-04:00  WARN 21180 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:16:33.749-04:00  INFO 21180 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:16:34.279-04:00  INFO 21180 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:16:34.283-04:00  INFO 21180 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:16:34.489-04:00  WARN 21180 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:16:34.684-04:00  INFO 21180 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:16:34.688-04:00  INFO 21180 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.879 seconds (process running for 4.361)
+2026-06-04T21:16:47.615-04:00  INFO 21180 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:16:47.615-04:00  INFO 21180 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:16:47.616-04:00  INFO 21180 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-04T21:16:47.699-04:00  INFO 21180 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:16:47.900-04:00  WARN 21180 --- [pagos-service] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
+2026-06-04T21:16:47.900-04:00 ERROR 21180 --- [pagos-service] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'db_pagos.pagos' doesn't exist
+2026-06-04T21:16:47.905-04:00  WARN 21180 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Error procesando pago - could not execute statement [Table 'db_pagos.pagos' doesn't exist] [insert into pagos (estado,metodo_pago,monto,reserva_id) values (?,?,?,?)]; SQL [insert into pagos (estado,metodo_pago,monto,reserva_id) values (?,?,?,?)]
+2026-06-04T21:19:59.903-04:00  INFO 16704 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 16704 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:19:59.905-04:00  INFO 16704 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:20:00.588-04:00  INFO 16704 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:20:00.641-04:00  INFO 16704 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2026-06-04T21:20:01.091-04:00  INFO 16704 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:20:01.106-04:00  INFO 16704 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:20:01.106-04:00  INFO 16704 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:20:01.155-04:00  INFO 16704 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:20:01.155-04:00  INFO 16704 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1198 ms
+2026-06-04T21:20:01.306-04:00  INFO 16704 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:20:01.359-04:00  INFO 16704 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:20:01.396-04:00  INFO 16704 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:20:01.663-04:00  INFO 16704 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:20:01.689-04:00  INFO 16704 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:20:01.839-04:00  INFO 16704 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a16984c
+2026-06-04T21:20:01.840-04:00  INFO 16704 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:20:01.872-04:00  WARN 16704 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:20:01.885-04:00  INFO 16704 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:20:02.406-04:00  INFO 16704 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:20:02.408-04:00  INFO 16704 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:20:02.595-04:00  WARN 16704 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:20:02.783-04:00  INFO 16704 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:20:02.789-04:00  INFO 16704 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.506 seconds (process running for 3.926)
+2026-06-04T21:21:33.071-04:00  INFO 17724 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 17724 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:21:33.072-04:00  INFO 17724 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:21:33.639-04:00  INFO 17724 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:21:33.692-04:00  INFO 17724 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2026-06-04T21:21:34.069-04:00  INFO 17724 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:21:34.079-04:00  INFO 17724 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:21:34.079-04:00  INFO 17724 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:21:34.115-04:00  INFO 17724 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:21:34.116-04:00  INFO 17724 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 995 ms
+2026-06-04T21:21:34.211-04:00  INFO 17724 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:21:34.237-04:00  INFO 17724 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:21:51.304-04:00  INFO 3512 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 3512 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:21:51.306-04:00 DEBUG 3512 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:21:51.308-04:00  INFO 3512 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:21:52.003-04:00  INFO 3512 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:21:52.068-04:00  INFO 3512 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2026-06-04T21:21:52.579-04:00  INFO 3512 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:21:52.592-04:00  INFO 3512 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:21:52.592-04:00  INFO 3512 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:21:52.647-04:00  INFO 3512 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:21:52.648-04:00  INFO 3512 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+2026-06-04T21:21:52.802-04:00  INFO 3512 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:21:52.843-04:00  INFO 3512 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:21:52.883-04:00  INFO 3512 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:21:53.251-04:00  INFO 3512 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:21:53.283-04:00  INFO 3512 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:21:53.458-04:00  INFO 3512 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d504137
+2026-06-04T21:21:53.460-04:00  INFO 3512 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:21:53.512-04:00  WARN 3512 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:21:53.527-04:00  INFO 3512 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:21:54.040-04:00  INFO 3512 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:21:54.041-04:00  INFO 3512 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:21:54.228-04:00  WARN 3512 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:21:54.429-04:00  INFO 3512 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:21:54.433-04:00  INFO 3512 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.761 seconds (process running for 4.236)
+2026-06-04T21:22:17.309-04:00  INFO 24488 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 24488 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:22:17.311-04:00 DEBUG 24488 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:22:17.317-04:00  INFO 24488 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:22:18.019-04:00  INFO 24488 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:22:18.073-04:00  INFO 24488 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-06-04T21:22:18.598-04:00  INFO 24488 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:22:18.616-04:00  INFO 24488 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:22:18.617-04:00  INFO 24488 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:22:18.674-04:00  INFO 24488 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:22:18.674-04:00  INFO 24488 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1309 ms
+2026-06-04T21:22:18.832-04:00  INFO 24488 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:22:18.880-04:00  INFO 24488 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:22:18.911-04:00  INFO 24488 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:22:19.221-04:00  INFO 24488 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:22:19.258-04:00  INFO 24488 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:22:19.445-04:00  INFO 24488 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3db1ce78
+2026-06-04T21:22:19.447-04:00  INFO 24488 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:22:19.486-04:00  WARN 24488 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:22:19.502-04:00  INFO 24488 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:22:20.044-04:00  INFO 24488 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:22:20.047-04:00  INFO 24488 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:22:20.249-04:00  WARN 24488 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:22:20.463-04:00  INFO 24488 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:22:20.469-04:00  INFO 24488 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.788 seconds (process running for 4.167)
+2026-06-04T21:22:26.606-04:00  INFO 24488 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:22:26.606-04:00  INFO 24488 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:22:26.608-04:00  INFO 24488 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-04T21:22:26.687-04:00  INFO 24488 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:22:26.883-04:00  WARN 24488 --- [pagos-service] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
+2026-06-04T21:22:26.883-04:00 ERROR 24488 --- [pagos-service] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'db_pagos.pagos' doesn't exist
+2026-06-04T21:22:26.889-04:00  WARN 24488 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Error procesando pago - could not execute statement [Table 'db_pagos.pagos' doesn't exist] [insert into pagos (estado,metodo_pago,monto,reserva_id) values (?,?,?,?)]; SQL [insert into pagos (estado,metodo_pago,monto,reserva_id) values (?,?,?,?)]
+2026-06-04T21:23:55.884-04:00  INFO 23496 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 23496 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:23:55.887-04:00 DEBUG 23496 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:23:55.889-04:00  INFO 23496 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:23:56.763-04:00  INFO 23496 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:23:56.816-04:00  INFO 23496 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2026-06-04T21:23:57.294-04:00  INFO 23496 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:23:57.308-04:00  INFO 23496 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:23:57.309-04:00  INFO 23496 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:23:57.362-04:00  INFO 23496 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:23:57.363-04:00  INFO 23496 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1380 ms
+2026-06-04T21:23:57.518-04:00  INFO 23496 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:23:57.568-04:00  INFO 23496 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:23:57.606-04:00  INFO 23496 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:23:57.929-04:00  INFO 23496 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:23:57.967-04:00  INFO 23496 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:23:58.152-04:00  INFO 23496 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b57f915
+2026-06-04T21:23:58.154-04:00  INFO 23496 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:23:58.202-04:00  WARN 23496 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:23:58.219-04:00  INFO 23496 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:23:58.707-04:00  INFO 23496 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:23:58.856-04:00  INFO 23496 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:23:59.036-04:00  WARN 23496 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:23:59.222-04:00  INFO 23496 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:23:59.227-04:00  INFO 23496 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 4.074 seconds (process running for 4.506)
+2026-06-04T21:24:11.651-04:00  INFO 23496 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:24:11.651-04:00  INFO 23496 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:24:11.651-04:00  INFO 23496 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T21:24:11.728-04:00  INFO 23496 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:24:11.994-04:00  INFO 23496 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Pago creado exitosamente id=1
+2026-06-04T21:24:56.144-04:00  INFO 19220 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 19220 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:24:56.146-04:00 DEBUG 19220 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:24:56.147-04:00  INFO 19220 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:24:56.929-04:00  INFO 19220 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:24:56.999-04:00  INFO 19220 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2026-06-04T21:24:57.507-04:00  INFO 19220 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:24:57.521-04:00  INFO 19220 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:24:57.522-04:00  INFO 19220 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:24:57.585-04:00  INFO 19220 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:24:57.585-04:00  INFO 19220 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1383 ms
+2026-06-04T21:24:57.737-04:00  INFO 19220 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:24:57.785-04:00  INFO 19220 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:24:57.815-04:00  INFO 19220 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:24:58.087-04:00  INFO 19220 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:24:58.132-04:00  INFO 19220 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:24:58.323-04:00  INFO 19220 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3db1ce78
+2026-06-04T21:24:58.325-04:00  INFO 19220 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:24:58.369-04:00  WARN 19220 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:24:58.391-04:00  INFO 19220 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:24:59.025-04:00  INFO 19220 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:24:59.028-04:00  INFO 19220 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:24:59.242-04:00  WARN 19220 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:24:59.439-04:00  INFO 19220 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:24:59.445-04:00  INFO 19220 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.837 seconds (process running for 4.293)
+2026-06-04T21:25:35.921-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:25:35.922-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:25:35.922-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T21:25:35.942-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : GET /api/pagos
+2026-06-04T21:27:11.468-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:27:11.755-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : Pago creado exitosamente id=2
+2026-06-04T21:27:21.729-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : DELETE /api/pagos/2
+2026-06-04T21:27:21.787-04:00  INFO 19220 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : Pago eliminado exitosamente id=2
+2026-06-04T21:29:17.307-04:00  INFO 16040 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 16040 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:29:17.309-04:00 DEBUG 16040 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:29:17.310-04:00  INFO 16040 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:29:18.005-04:00  INFO 16040 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:29:18.065-04:00  INFO 16040 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2026-06-04T21:29:18.598-04:00  INFO 16040 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:29:18.613-04:00  INFO 16040 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:29:18.613-04:00  INFO 16040 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:29:18.678-04:00  INFO 16040 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:29:18.679-04:00  INFO 16040 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1319 ms
+2026-06-04T21:29:18.854-04:00  INFO 16040 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:29:18.911-04:00  INFO 16040 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:29:18.953-04:00  INFO 16040 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:29:19.253-04:00  INFO 16040 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:29:19.289-04:00  INFO 16040 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:29:19.461-04:00  INFO 16040 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e2bd5e6
+2026-06-04T21:29:19.463-04:00  INFO 16040 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:29:19.518-04:00  WARN 16040 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:29:19.532-04:00  INFO 16040 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:29:20.026-04:00  INFO 16040 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:29:20.028-04:00  INFO 16040 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:29:20.235-04:00  WARN 16040 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:29:20.437-04:00  INFO 16040 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:29:20.443-04:00  INFO 16040 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.719 seconds (process running for 4.117)
+2026-06-04T21:29:30.339-04:00  INFO 16040 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:29:30.339-04:00  INFO 16040 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:29:30.340-04:00  INFO 16040 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-04T21:29:30.351-04:00  WARN 16040 --- [pagos-service] [http-nio-8086-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-06-04T21:29:39.566-04:00  INFO 16040 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:29:39.864-04:00  INFO 16040 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : Pago creado exitosamente id=3
+2026-06-04T21:30:23.375-04:00  INFO 4404 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 4404 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:30:23.379-04:00 DEBUG 4404 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:30:23.379-04:00  INFO 4404 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:30:24.148-04:00  INFO 4404 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:30:24.201-04:00  INFO 4404 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-06-04T21:30:24.684-04:00  INFO 4404 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:30:24.701-04:00  INFO 4404 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:30:24.702-04:00  INFO 4404 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:30:24.755-04:00  INFO 4404 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:30:24.755-04:00  INFO 4404 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1311 ms
+2026-06-04T21:30:24.886-04:00  INFO 4404 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:30:24.927-04:00  INFO 4404 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:30:24.955-04:00  INFO 4404 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:30:25.263-04:00  INFO 4404 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:30:25.302-04:00  INFO 4404 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:30:25.526-04:00  INFO 4404 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ab63a04
+2026-06-04T21:30:25.528-04:00  INFO 4404 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:30:25.578-04:00  WARN 4404 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:30:25.701-04:00  INFO 4404 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:30:26.219-04:00  INFO 4404 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:30:26.222-04:00  INFO 4404 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:30:26.421-04:00  WARN 4404 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:30:26.621-04:00  INFO 4404 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:30:26.626-04:00  INFO 4404 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.809 seconds (process running for 4.185)
+2026-06-04T21:30:34.036-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:30:34.036-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:30:34.037-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-04T21:30:34.115-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:30:34.390-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Pago creado exitosamente id=4
+2026-06-04T21:31:26.981-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : DELETE /api/pagos/4
+2026-06-04T21:31:27.126-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : Pago eliminado exitosamente id=4
+2026-06-04T21:31:29.530-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : DELETE /api/pagos/3
+2026-06-04T21:31:29.571-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : Pago eliminado exitosamente id=3
+2026-06-04T21:31:33.508-04:00  INFO 4404 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : GET /api/pagos
+2026-06-04T21:32:17.981-04:00  INFO 20192 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 20192 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:32:17.995-04:00 DEBUG 20192 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:32:17.998-04:00  INFO 20192 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:32:18.848-04:00  INFO 20192 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:32:18.914-04:00  INFO 20192 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2026-06-04T21:32:19.499-04:00  INFO 20192 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:32:19.517-04:00  INFO 20192 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:32:19.518-04:00  INFO 20192 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:32:19.583-04:00  INFO 20192 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:32:19.583-04:00  INFO 20192 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1531 ms
+2026-06-04T21:32:19.780-04:00  INFO 20192 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:32:19.826-04:00  INFO 20192 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:32:19.864-04:00  INFO 20192 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:32:20.221-04:00  INFO 20192 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:32:20.261-04:00  INFO 20192 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:32:20.458-04:00  INFO 20192 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a6d1ff3
+2026-06-04T21:32:20.462-04:00  INFO 20192 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:32:20.498-04:00  WARN 20192 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:32:20.514-04:00  INFO 20192 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:32:21.088-04:00  INFO 20192 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:32:21.089-04:00  INFO 20192 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:32:21.326-04:00  WARN 20192 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:32:21.523-04:00  INFO 20192 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:32:21.527-04:00  INFO 20192 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 4.239 seconds (process running for 4.753)
+2026-06-04T21:32:32.084-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:32:32.084-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:32:32.084-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T21:32:32.167-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:32:32.167-04:00  WARN 20192 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Errores de validación al crear pago - {monto=El monto debe ser mayor a 0}
+2026-06-04T21:32:40.478-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=7
+2026-06-04T21:32:40.478-04:00  WARN 20192 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : Errores de validación al crear pago - {monto=El monto debe ser mayor a 0}
+2026-06-04T21:32:52.250-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=7
+2026-06-04T21:32:52.394-04:00  WARN 20192 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : Error procesando pago - La reserva con ID 7 no existe
+2026-06-04T21:37:09.713-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=7
+2026-06-04T21:37:09.713-04:00  WARN 20192 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : Errores de validación al crear pago - {monto=El monto debe ser mayor a 0}
+2026-06-04T21:37:15.774-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-5] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=7
+2026-06-04T21:37:15.774-04:00  WARN 20192 --- [pagos-service] [http-nio-8086-exec-5] com.pagos.controller.PagosController     : Errores de validación al crear pago - {monto=El monto debe ser mayor a 0}
+2026-06-04T21:37:20.563-04:00  INFO 20192 --- [pagos-service] [http-nio-8086-exec-6] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=0
+2026-06-04T21:37:20.563-04:00  WARN 20192 --- [pagos-service] [http-nio-8086-exec-6] com.pagos.controller.PagosController     : Errores de validación al crear pago - {monto=El monto debe ser mayor a 0}
+2026-06-04T21:45:52.231-04:00  INFO 9568 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Starting PagosServiceApplication using Java 25.0.1 with PID 9568 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\pagos-service)
+2026-06-04T21:45:52.232-04:00 DEBUG 9568 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-04T21:45:52.233-04:00  INFO 9568 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-04T21:45:52.982-04:00  INFO 9568 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-04T21:45:53.042-04:00  INFO 9568 --- [pagos-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2026-06-04T21:45:53.605-04:00  INFO 9568 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-04T21:45:53.621-04:00  INFO 9568 --- [pagos-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-04T21:45:53.622-04:00  INFO 9568 --- [pagos-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-04T21:45:53.676-04:00  INFO 9568 --- [pagos-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-04T21:45:53.676-04:00  INFO 9568 --- [pagos-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1380 ms
+2026-06-04T21:45:53.819-04:00  INFO 9568 --- [pagos-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-04T21:45:53.862-04:00  INFO 9568 --- [pagos-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-04T21:45:53.898-04:00  INFO 9568 --- [pagos-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-04T21:45:54.285-04:00  INFO 9568 --- [pagos-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-04T21:45:54.324-04:00  INFO 9568 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-04T21:45:54.500-04:00  INFO 9568 --- [pagos-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d504137
+2026-06-04T21:45:54.501-04:00  INFO 9568 --- [pagos-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-04T21:45:54.553-04:00  WARN 9568 --- [pagos-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-04T21:45:54.572-04:00  INFO 9568 --- [pagos-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-04T21:45:55.101-04:00  INFO 9568 --- [pagos-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-04T21:45:55.104-04:00  INFO 9568 --- [pagos-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-04T21:45:55.294-04:00  WARN 9568 --- [pagos-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-04T21:45:55.494-04:00  INFO 9568 --- [pagos-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2026-06-04T21:45:55.498-04:00  INFO 9568 --- [pagos-service] [main] com.pagos.PagosServiceApplication        : Started PagosServiceApplication in 3.927 seconds (process running for 4.309)
+2026-06-04T21:46:02.719-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-04T21:46:02.719-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-04T21:46:02.719-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-04T21:46:02.801-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=0
+2026-06-04T21:46:02.801-04:00  WARN 9568 --- [pagos-service] [http-nio-8086-exec-1] com.pagos.controller.PagosController     : Errores de validación al crear pago - [El monto debe ser mayor a 0]
+2026-06-04T21:46:09.479-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=7
+2026-06-04T21:46:09.479-04:00  WARN 9568 --- [pagos-service] [http-nio-8086-exec-3] com.pagos.controller.PagosController     : Errores de validación al crear pago - [El monto debe ser mayor a 0]
+2026-06-04T21:46:15.779-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:46:15.781-04:00  WARN 9568 --- [pagos-service] [http-nio-8086-exec-2] com.pagos.controller.PagosController     : Errores de validación al crear pago - [El monto debe ser mayor a 0]
+2026-06-04T21:46:51.689-04:00  INFO 9568 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : POST /api/pagos/pagar - reservaId=1
+2026-06-04T21:46:51.689-04:00  WARN 9568 --- [pagos-service] [http-nio-8086-exec-4] com.pagos.controller.PagosController     : Errores de validación al crear pago - [El monto debe ser mayor a 0, El método de pago es obligatorio]

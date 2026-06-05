@@ -10,4 +10,7 @@ start cmd /k "cd cinefunciones-service && mvnw spring-boot:run"
 
 start cmd /k "cd reservas-service && mvnw spring-boot:run"
 
+start cmd /k "cd pagos-service && mvnw spring-boot:run"
+
 start cmd /k "cd api-getaway && mvnw spring-boot:run"
+

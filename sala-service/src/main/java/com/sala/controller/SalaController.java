@@ -1,8 +1,8 @@
 package com.sala.controller;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,11 +33,16 @@ public class SalaController {
 
     /*Para mostrar todas las salas */
     @GetMapping
-    public List<SalaDTO> getAll(){
+    public ResponseEntity<?> getAll(){
         logger.info("GET /api/salas");
-        List<SalaDTO> salas = salaService.getAll();
-        logger.debug("Cantidad de salas obtenidas: {}", salas.size());
-        return salas;
+        try {
+            List<SalaDTO> salas = salaService.getAll();
+            logger.debug("Cantidad de salas obtenidas: {}", salas.size());
+            return ResponseEntity.ok(salas);
+        } catch (RuntimeException ex) {
+            logger.warn("Error obteniendo salas - {}", ex.getMessage());
+            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+        }
     }
 
     /*Para buscar sala por id */
@@ -57,12 +62,12 @@ public class SalaController {
     public ResponseEntity<?> save(@Valid @RequestBody SalaDTO dto, BindingResult bindingResult) {
         logger.info("POST /api/salas - nombre={}", dto.getNombre());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errores.put(error.getField(), error.getDefaultMessage())
-            );
-            logger.warn("Errores de validación: {}", errores);
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
 
         try {
@@ -80,12 +85,12 @@ public class SalaController {
     public ResponseEntity<?> update(@PathVariable Long id, @Valid @RequestBody SalaDTO dto, BindingResult bindingResult) {
         logger.info("PUT /api/salas/{} - nombre={}", id, dto.getNombre());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errores.put(error.getField(), error.getDefaultMessage())
-            );
-            logger.warn("Errores de validación: {}", errores);
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
 
         try {

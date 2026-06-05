@@ -12,9 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api/peliculas")
@@ -27,11 +27,16 @@ public class PeliculaController {
 
     // PELICULAS
     @GetMapping
-    public List<PeliculaDTO> getAllPeliculas() {
+    public ResponseEntity<?> getAllPeliculas() {
         logger.info("GET /api/peliculas");
-        List<PeliculaDTO> peliculas = peliculaService.getAll();
-        logger.debug("Cantidad de películas obtenidas: {}", peliculas.size());
-        return peliculas;
+        try {
+            List<PeliculaDTO> peliculas = peliculaService.getAll();
+            logger.debug("Cantidad de películas obtenidas: {}", peliculas.size());
+            return ResponseEntity.ok(peliculas);
+        } catch (RuntimeException ex) {
+            logger.warn("Error obteniendo películas - {}", ex.getMessage());
+            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+        }
     }
 
     @GetMapping("/{id}")
@@ -46,27 +51,37 @@ public class PeliculaController {
     }
 
     @GetMapping("/genero/{generoId}")
-    public List<PeliculaDTO> getPeliculasByGenero(@PathVariable Long generoId) {
+    public ResponseEntity<?> getPeliculasByGenero(@PathVariable Long generoId) {
         logger.info("GET /api/peliculas/genero/{}", generoId);
-        return peliculaService.getByGenero(generoId);
+        try {
+            return ResponseEntity.ok(peliculaService.getByGenero(generoId));
+        } catch (RuntimeException ex) {
+            logger.warn("Error buscando películas por género={} - {}", generoId, ex.getMessage());
+            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+        }
     }
 
     @GetMapping("/clasificacion/{clasificacion}")
-    public List<PeliculaDTO> getPeliculasByClasificacion(@PathVariable String clasificacion) {
+    public ResponseEntity<?> getPeliculasByClasificacion(@PathVariable String clasificacion) {
         logger.info("GET /api/peliculas/clasificacion/{}", clasificacion);
-        return peliculaService.getByClasificacion(clasificacion);
+        try {
+            return ResponseEntity.ok(peliculaService.getByClasificacion(clasificacion));
+        } catch (RuntimeException ex) {
+            logger.warn("Error buscando películas por clasificación={} - {}", clasificacion, ex.getMessage());
+            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+        }
     }
 
     @PostMapping
     public ResponseEntity<?> savePelicula(@Valid @RequestBody PeliculaDTO dto, BindingResult bindingResult) {
         logger.info("POST /api/peliculas - titulo={}", dto.getTitulo());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errores.put(error.getField(), error.getDefaultMessage())
-            );
-            logger.warn("Errores de validación: {}", errores);
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
         try {
             PeliculaDTO guardada = peliculaService.save(dto);
@@ -82,12 +97,12 @@ public class PeliculaController {
     public ResponseEntity<?> updatePelicula(@PathVariable Long id, @Valid @RequestBody PeliculaDTO dto, BindingResult bindingResult) {
         logger.info("PUT /api/peliculas/{} - titulo={}", id, dto.getTitulo());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errores.put(error.getField(), error.getDefaultMessage())
-            );
-            logger.warn("Errores de validación: {}", errores);
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
         try {
             PeliculaDTO actualizado = peliculaService.update(id, dto);
@@ -114,11 +129,16 @@ public class PeliculaController {
 
     // GENEROS
     @GetMapping("/generos")
-    public List<GeneroDTO> getAllGeneros() {
+    public ResponseEntity<?> getAllGeneros() {
         logger.info("GET /api/peliculas/generos");
-        List<GeneroDTO> generos = generoService.getAll();
-        logger.debug("Cantidad de géneros obtenidos: {}", generos.size());
-        return generos;
+        try {
+            List<GeneroDTO> generos = generoService.getAll();
+            logger.debug("Cantidad de géneros obtenidos: {}", generos.size());
+            return ResponseEntity.ok(generos);
+        } catch (RuntimeException ex) {
+            logger.warn("Error obteniendo géneros - {}", ex.getMessage());
+            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+        }
     }
 
     @GetMapping("/generos/{id}")
@@ -136,12 +156,12 @@ public class PeliculaController {
     public ResponseEntity<?> saveGenero(@Valid @RequestBody GeneroDTO dto, BindingResult bindingResult) {
         logger.info("POST /api/peliculas/generos - nombre={}", dto.getNombre());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errores.put(error.getField(), error.getDefaultMessage())
-            );
-            logger.warn("Errores de validación: {}", errores);
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
         try {
             GeneroDTO guardado = generoService.save(dto);
@@ -157,12 +177,12 @@ public class PeliculaController {
     public ResponseEntity<?> updateGenero(@PathVariable Long id, @Valid @RequestBody GeneroDTO dto, BindingResult bindingResult) {
         logger.info("PUT /api/peliculas/generos/{} - nombre={}", id, dto.getNombre());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errores.put(error.getField(), error.getDefaultMessage())
-            );
-            logger.warn("Errores de validación: {}", errores);
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
         try {
             GeneroDTO actualizado = generoService.update(id, dto);

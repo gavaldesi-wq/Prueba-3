@@ -10,8 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
@@ -67,15 +68,14 @@ public class ReservasController {
                 request.getFuncionId());
 
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
 
-            bindingResult.getFieldErrors().forEach(error ->
-                    errores.put(error.getField(), error.getDefaultMessage())
-            );
+            log.warn("Errores de validación al comprar reserva - {}", errors);
 
-            log.warn("Errores de validación al comprar reserva - {}", errores);
-
-            return ResponseEntity.badRequest().body(errores);
+            return ResponseEntity.badRequest().body(errors);
         }
 
         try {
