@@ -1,149 +1,33 @@
-2026-06-04T19:08:41.772-04:00  INFO 20668 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 20668 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T19:08:41.777-04:00 DEBUG 20668 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T19:08:41.777-04:00  INFO 20668 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T19:08:42.174-04:00  INFO 20668 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T19:08:42.207-04:00  INFO 20668 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
-2026-06-04T19:08:42.504-04:00  INFO 20668 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T19:08:42.513-04:00  INFO 20668 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T19:08:42.513-04:00  INFO 20668 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T19:08:42.546-04:00  INFO 20668 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T19:08:42.546-04:00  INFO 20668 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 729 ms
-2026-06-04T19:08:42.626-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T19:08:42.733-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c770db4
-2026-06-04T19:08:42.735-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T19:08:43.134-04:00  INFO 20668 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T19:08:43.185-04:00  INFO 20668 --- [reservas-service] [main] liquibase.changelog                      : Change failed validation!
-2026-06-04T19:08:43.187-04:00  INFO 20668 --- [reservas-service] [main] liquibase.command                        : Logging exception.
-2026-06-04T19:08:43.187-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Details
-2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ValidationFailedException
-2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.ui                             : ERROR: Exception Primary Source:  4.31.1
-2026-06-04T19:08:43.188-04:00  INFO 20668 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T19:08:44.329-04:00  WARN 20668 --- [reservas-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-2026-06-04T19:08:44.330-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-04T19:08:44.334-04:00  INFO 20668 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-04T19:08:44.338-04:00  INFO 20668 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-06-04T19:08:44.344-04:00  INFO 20668 --- [reservas-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-06-04T19:08:44.355-04:00 ERROR 20668 --- [reservas-service] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:974) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.18.jar:6.2.18]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
-	at com.reservas.ReservasServiceApplication.main(ReservasServiceApplication.java:12) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.18.jar:6.2.18]
-	... 10 common frames omitted
-Caused by: liquibase.exception.LiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288) ~[liquibase-core-4.31.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.18.jar:6.2.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.18.jar:6.2.18]
-	... 17 common frames omitted
-Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
-	... 19 common frames omitted
-Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changesets check sum
-          db/changelog/db.changelog-master.xml::1::gabriel was: 9:f85572db8be3fac3d2fa5a0d6a99d9b2 but is now: 9:5bf697ac443aefc7fbb980b21699e5cd
-
-	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:384) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:88) ~[liquibase-core-4.31.1.jar:na]
-	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
-	... 37 common frames omitted
-
-2026-06-04T19:16:22.394-04:00  INFO 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 17416 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T19:16:22.402-04:00 DEBUG 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T19:16:22.403-04:00  INFO 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T19:16:23.128-04:00  INFO 17416 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T19:16:23.184-04:00  INFO 17416 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
-2026-06-04T19:16:23.669-04:00  INFO 17416 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T19:16:23.684-04:00  INFO 17416 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T19:16:23.685-04:00  INFO 17416 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T19:16:23.743-04:00  INFO 17416 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T19:16:23.744-04:00  INFO 17416 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1296 ms
-2026-06-04T19:16:23.896-04:00  INFO 17416 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T19:16:24.045-04:00  INFO 17416 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0a2638
-2026-06-04T19:16:24.046-04:00  INFO 17416 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T19:16:24.467-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Creating database history table with name: db_reservas.databasechangelog
-2026-06-04T19:16:24.843-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T19:16:24.855-04:00  INFO 17416 --- [reservas-service] [main] liquibase.snapshot                       : Creating snapshot
-2026-06-04T19:16:25.194-04:00  WARN 17416 --- [reservas-service] [main] liquibase.executor                       : Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-2026-06-04T19:16:25.274-04:00  INFO 17416 --- [reservas-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
-2026-06-04T19:16:25.275-04:00  INFO 17416 --- [reservas-service] [main] liquibase.command                        : Using deploymentId: 0614983880
-2026-06-04T19:16:25.277-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T19:16:25.292-04:00  INFO 17416 --- [reservas-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-master.xml::1::gabriel
-2026-06-04T19:16:25.413-04:00  WARN 17416 --- [reservas-service] [main] liquibase.executor                       : Name 'PK_RESERVAS' ignored for PRIMARY key.
-2026-06-04T19:16:25.413-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : Table reservas created
-2026-06-04T19:16:25.414-04:00  INFO 17416 --- [reservas-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-master.xml::1::gabriel ran successfully in 121ms
-2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Run:                          1
-2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Previously run:               0
-2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T19:16:25.445-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T19:16:25.446-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T19:16:25.446-04:00  INFO 17416 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T19:16:25.448-04:00  INFO 17416 --- [reservas-service] [main] liquibase.command                        : Update command completed successfully.
-2026-06-04T19:16:25.448-04:00  INFO 17416 --- [reservas-service] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
-2026-06-04T19:16:25.472-04:00  INFO 17416 --- [reservas-service] [main] liquibase.lockservice                    : Successfully released change log lock
-2026-06-04T19:16:25.473-04:00  INFO 17416 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T19:16:26.970-04:00  INFO 17416 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T19:16:27.004-04:00  INFO 17416 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T19:16:27.023-04:00  INFO 17416 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T19:16:27.183-04:00  INFO 17416 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T19:16:27.223-04:00  WARN 17416 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T19:16:27.233-04:00  INFO 17416 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-06-06T00:28:30.098-04:00  INFO 17720 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 17720 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
+2026-06-06T00:28:30.103-04:00 DEBUG 17720 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-06T00:28:30.105-04:00  INFO 17720 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-06-06T00:28:31.412-04:00  INFO 17720 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-06T00:28:31.515-04:00  INFO 17720 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
+2026-06-06T00:28:32.099-04:00  INFO 17720 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-06-06T00:28:32.116-04:00  INFO 17720 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-06T00:28:32.117-04:00  INFO 17720 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-06T00:28:32.192-04:00  INFO 17720 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-06T00:28:32.193-04:00  INFO 17720 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2025 ms
+2026-06-06T00:28:32.353-04:00  INFO 17720 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-06T00:28:32.571-04:00  INFO 17720 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ae15
+2026-06-06T00:28:32.573-04:00  INFO 17720 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-06T00:28:33.599-04:00  INFO 17720 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:28:33.684-04:00  INFO 17720 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-06-06T00:28:33.686-04:00  INFO 17720 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:28:33.696-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-06T00:28:33.696-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : Run:                          0
+2026-06-06T00:28:33.696-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
+2026-06-06T00:28:33.697-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-06T00:28:33.697-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : -------------------------------
+2026-06-06T00:28:33.697-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
+2026-06-06T00:28:33.698-04:00  INFO 17720 --- [reservas-service] [main] liquibase.util                           : Update summary generated
+2026-06-06T00:28:33.699-04:00  INFO 17720 --- [reservas-service] [main] liquibase.command                        : Command execution complete
+2026-06-06T00:28:34.997-04:00  INFO 17720 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-06T00:28:35.027-04:00  INFO 17720 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-06T00:28:35.049-04:00  INFO 17720 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-06T00:28:35.238-04:00  INFO 17720 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-06T00:28:35.284-04:00  WARN 17720 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-06T00:28:35.294-04:00  INFO 17720 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 5.5.5
@@ -151,47 +35,41 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-04T19:16:27.730-04:00  INFO 17416 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T19:16:27.732-04:00  INFO 17416 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T19:16:27.956-04:00  WARN 17416 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T19:16:28.157-04:00  INFO 17416 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T19:16:28.161-04:00  INFO 17416 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.233 seconds (process running for 6.593)
-2026-06-04T19:16:42.717-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T19:16:42.717-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T19:16:42.717-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-06-04T19:16:42.742-04:00  WARN 17416 --- [reservas-service] [http-nio-8085-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "reservar"]
-2026-06-04T19:17:57.395-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-2] c.r.controller.ReservasController        : POST /api/reservas/comprar - correo=gabriel@gmail.com funcionId=1
-2026-06-04T19:17:57.934-04:00  INFO 17416 --- [reservas-service] [http-nio-8085-exec-2] c.r.controller.ReservasController        : Reserva creada exitosamente id=1
-2026-06-04T21:06:50.913-04:00  INFO 22092 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 22092 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:06:50.915-04:00 DEBUG 22092 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:06:50.918-04:00  INFO 22092 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:06:51.711-04:00  INFO 22092 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:06:51.774-04:00  INFO 22092 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
-2026-06-04T21:06:52.342-04:00  INFO 22092 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:06:52.358-04:00  INFO 22092 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:06:52.359-04:00  INFO 22092 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:06:52.422-04:00  INFO 22092 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:06:52.423-04:00  INFO 22092 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1454 ms
-2026-06-04T21:06:52.561-04:00  INFO 22092 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:06:52.745-04:00  INFO 22092 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f2276c9
-2026-06-04T21:06:52.747-04:00  INFO 22092 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:06:53.527-04:00  INFO 22092 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:06:53.564-04:00  INFO 22092 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:06:53.565-04:00  INFO 22092 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:06:53.571-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:06:53.572-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:06:53.572-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:06:53.572-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:06:53.572-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:06:53.572-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:06:53.573-04:00  INFO 22092 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:06:53.574-04:00  INFO 22092 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:06:55.146-04:00  INFO 22092 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:06:55.188-04:00  INFO 22092 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:06:55.218-04:00  INFO 22092 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:06:55.469-04:00  INFO 22092 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:06:55.513-04:00  WARN 22092 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:06:55.523-04:00  INFO 22092 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-06-06T00:28:35.803-04:00  INFO 17720 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-06T00:28:35.806-04:00  INFO 17720 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-06T00:28:36.018-04:00  WARN 17720 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-06T00:28:36.239-04:00  INFO 17720 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-06-06T00:28:36.245-04:00  INFO 17720 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.753 seconds (process running for 7.249)
+2026-06-06T00:31:13.884-04:00  INFO 4212 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 4212 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
+2026-06-06T00:31:13.887-04:00 DEBUG 4212 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-06T00:31:13.888-04:00  INFO 4212 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-06-06T00:31:14.827-04:00  INFO 4212 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-06T00:31:14.916-04:00  INFO 4212 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2026-06-06T00:31:15.669-04:00  INFO 4212 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-06-06T00:31:15.692-04:00  INFO 4212 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-06T00:31:15.692-04:00  INFO 4212 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-06T00:31:15.802-04:00  INFO 4212 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-06T00:31:15.803-04:00  INFO 4212 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1863 ms
+2026-06-06T00:31:16.086-04:00  INFO 4212 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-06T00:31:16.308-04:00  INFO 4212 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5382184b
+2026-06-06T00:31:16.312-04:00  INFO 4212 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-06T00:31:17.051-04:00  INFO 4212 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:31:17.100-04:00  INFO 4212 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-06-06T00:31:17.102-04:00  INFO 4212 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:31:17.114-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-06T00:31:17.115-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : Run:                          0
+2026-06-06T00:31:17.115-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
+2026-06-06T00:31:17.115-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-06T00:31:17.115-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : -------------------------------
+2026-06-06T00:31:17.116-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
+2026-06-06T00:31:17.117-04:00  INFO 4212 --- [reservas-service] [main] liquibase.util                           : Update summary generated
+2026-06-06T00:31:17.118-04:00  INFO 4212 --- [reservas-service] [main] liquibase.command                        : Command execution complete
+2026-06-06T00:31:18.416-04:00  INFO 4212 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-06T00:31:18.491-04:00  INFO 4212 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-06T00:31:18.526-04:00  INFO 4212 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-06T00:31:18.740-04:00  INFO 4212 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-06T00:31:18.785-04:00  WARN 4212 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-06T00:31:18.797-04:00  INFO 4212 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 5.5.5
@@ -199,46 +77,41 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-04T21:06:56.143-04:00  INFO 22092 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:06:56.146-04:00  INFO 22092 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:06:56.429-04:00  WARN 22092 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:06:56.663-04:00  INFO 22092 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:06:56.667-04:00  INFO 22092 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.438 seconds (process running for 6.882)
-2026-06-04T21:07:32.507-04:00  INFO 22092 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:07:32.507-04:00  INFO 22092 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:07:32.509-04:00  INFO 22092 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-06-04T21:07:32.530-04:00  INFO 22092 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas
-2026-06-04T21:09:20.243-04:00  INFO 22092 --- [reservas-service] [http-nio-8085-exec-3] c.r.controller.ReservasController        : GET /api/reservas
-2026-06-04T21:11:48.052-04:00  INFO 2464 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 2464 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:11:48.054-04:00 DEBUG 2464 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:11:48.056-04:00  INFO 2464 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:11:48.910-04:00  INFO 2464 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:11:48.974-04:00  INFO 2464 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
-2026-06-04T21:11:49.488-04:00  INFO 2464 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:11:49.501-04:00  INFO 2464 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:11:49.502-04:00  INFO 2464 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:11:49.562-04:00  INFO 2464 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:11:49.562-04:00  INFO 2464 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
-2026-06-04T21:11:49.715-04:00  INFO 2464 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:11:49.876-04:00  INFO 2464 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0a2638
-2026-06-04T21:11:49.878-04:00  INFO 2464 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:11:50.515-04:00  INFO 2464 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:11:50.557-04:00  INFO 2464 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:11:50.559-04:00  INFO 2464 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:11:50.567-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:11:50.568-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:11:50.568-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:11:50.568-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:11:50.569-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:11:50.569-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:11:50.570-04:00  INFO 2464 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:11:50.571-04:00  INFO 2464 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:11:52.126-04:00  INFO 2464 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:11:52.153-04:00  INFO 2464 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:11:52.178-04:00  INFO 2464 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:11:52.363-04:00  INFO 2464 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:11:52.400-04:00  WARN 2464 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:11:52.409-04:00  INFO 2464 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-06-06T00:31:19.382-04:00  INFO 4212 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-06T00:31:19.385-04:00  INFO 4212 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-06T00:31:19.651-04:00  WARN 4212 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-06T00:31:19.885-04:00  INFO 4212 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-06-06T00:31:19.890-04:00  INFO 4212 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.712 seconds (process running for 7.305)
+2026-06-06T00:46:04.642-04:00  INFO 2992 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 2992 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
+2026-06-06T00:46:04.643-04:00 DEBUG 2992 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-06T00:46:04.644-04:00  INFO 2992 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-06-06T00:46:05.460-04:00  INFO 2992 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-06T00:46:05.505-04:00  INFO 2992 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-06-06T00:46:05.911-04:00  INFO 2992 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-06-06T00:46:05.922-04:00  INFO 2992 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-06T00:46:05.923-04:00  INFO 2992 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-06T00:46:05.977-04:00  INFO 2992 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-06T00:46:05.977-04:00  INFO 2992 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1281 ms
+2026-06-06T00:46:06.073-04:00  INFO 2992 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-06T00:46:06.205-04:00  INFO 2992 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4962b41e
+2026-06-06T00:46:06.207-04:00  INFO 2992 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-06T00:46:06.717-04:00  INFO 2992 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:46:06.750-04:00  INFO 2992 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-06-06T00:46:06.751-04:00  INFO 2992 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:46:06.758-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-06T00:46:06.758-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : Run:                          0
+2026-06-06T00:46:06.758-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
+2026-06-06T00:46:06.758-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-06T00:46:06.759-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : -------------------------------
+2026-06-06T00:46:06.759-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
+2026-06-06T00:46:06.760-04:00  INFO 2992 --- [reservas-service] [main] liquibase.util                           : Update summary generated
+2026-06-06T00:46:06.761-04:00  INFO 2992 --- [reservas-service] [main] liquibase.command                        : Command execution complete
+2026-06-06T00:46:07.882-04:00  INFO 2992 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-06T00:46:07.910-04:00  INFO 2992 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-06T00:46:07.928-04:00  INFO 2992 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-06T00:46:08.090-04:00  INFO 2992 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-06T00:46:08.132-04:00  WARN 2992 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-06T00:46:08.140-04:00  INFO 2992 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 5.5.5
@@ -246,45 +119,41 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-04T21:11:52.942-04:00  INFO 2464 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:11:52.946-04:00  INFO 2464 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:11:53.159-04:00  WARN 2464 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:11:53.361-04:00  INFO 2464 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:11:53.365-04:00  INFO 2464 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.999 seconds (process running for 6.507)
-2026-06-04T21:12:18.611-04:00  INFO 2464 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:12:18.611-04:00  INFO 2464 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:12:18.612-04:00  INFO 2464 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-04T21:12:18.633-04:00  INFO 2464 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:16:31.420-04:00  INFO 19860 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 19860 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:16:31.421-04:00 DEBUG 19860 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:16:31.424-04:00  INFO 19860 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:16:32.267-04:00  INFO 19860 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:16:32.328-04:00  INFO 19860 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
-2026-06-04T21:16:32.846-04:00  INFO 19860 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:16:32.859-04:00  INFO 19860 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:16:32.859-04:00  INFO 19860 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:16:32.912-04:00  INFO 19860 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:16:32.913-04:00  INFO 19860 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1357 ms
-2026-06-04T21:16:33.051-04:00  INFO 19860 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:16:33.268-04:00  INFO 19860 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12219f6a
-2026-06-04T21:16:33.270-04:00  INFO 19860 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:16:33.889-04:00  INFO 19860 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:16:33.921-04:00  INFO 19860 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:16:33.922-04:00  INFO 19860 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:16:33.927-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:16:33.927-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:16:33.928-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:16:33.928-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:16:33.928-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:16:33.929-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:16:33.929-04:00  INFO 19860 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:16:33.930-04:00  INFO 19860 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:16:35.483-04:00  INFO 19860 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:16:35.511-04:00  INFO 19860 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:16:35.531-04:00  INFO 19860 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:16:35.698-04:00  INFO 19860 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:16:35.739-04:00  WARN 19860 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:16:35.749-04:00  INFO 19860 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-06-06T00:46:08.612-04:00  INFO 2992 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-06T00:46:08.614-04:00  INFO 2992 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-06T00:46:08.883-04:00  WARN 2992 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-06T00:46:09.131-04:00  INFO 2992 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-06-06T00:46:09.136-04:00  INFO 2992 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.107 seconds (process running for 5.546)
+2026-06-06T00:48:24.474-04:00  INFO 18960 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 18960 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
+2026-06-06T00:48:24.475-04:00 DEBUG 18960 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-06T00:48:24.477-04:00  INFO 18960 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-06-06T00:48:25.538-04:00  INFO 18960 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-06T00:48:25.630-04:00  INFO 18960 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2026-06-06T00:48:26.421-04:00  INFO 18960 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-06-06T00:48:26.446-04:00  INFO 18960 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-06T00:48:26.447-04:00  INFO 18960 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-06T00:48:26.526-04:00  INFO 18960 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-06T00:48:26.528-04:00  INFO 18960 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2005 ms
+2026-06-06T00:48:26.674-04:00  INFO 18960 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-06T00:48:26.890-04:00  INFO 18960 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25974207
+2026-06-06T00:48:26.892-04:00  INFO 18960 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-06T00:48:27.621-04:00  INFO 18960 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:48:27.663-04:00  INFO 18960 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-06-06T00:48:27.666-04:00  INFO 18960 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
+2026-06-06T00:48:27.673-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-06T00:48:27.674-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : Run:                          0
+2026-06-06T00:48:27.674-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
+2026-06-06T00:48:27.674-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
+2026-06-06T00:48:27.674-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : -------------------------------
+2026-06-06T00:48:27.674-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
+2026-06-06T00:48:27.675-04:00  INFO 18960 --- [reservas-service] [main] liquibase.util                           : Update summary generated
+2026-06-06T00:48:27.676-04:00  INFO 18960 --- [reservas-service] [main] liquibase.command                        : Command execution complete
+2026-06-06T00:48:28.893-04:00  INFO 18960 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-06T00:48:28.931-04:00  INFO 18960 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-06T00:48:28.962-04:00  INFO 18960 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-06T00:48:29.152-04:00  INFO 18960 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-06T00:48:29.203-04:00  WARN 18960 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-06T00:48:29.215-04:00  INFO 18960 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 5.5.5
@@ -292,409 +161,12 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-04T21:16:36.259-04:00  INFO 19860 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:16:36.261-04:00  INFO 19860 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:16:36.478-04:00  WARN 19860 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:16:36.664-04:00  INFO 19860 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:16:36.668-04:00  INFO 19860 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.829 seconds (process running for 6.269)
-2026-06-04T21:16:47.752-04:00  INFO 19860 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:16:47.753-04:00  INFO 19860 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:16:47.753-04:00  INFO 19860 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-06-04T21:16:47.774-04:00  INFO 19860 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:19:59.319-04:00  INFO 18472 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 18472 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:19:59.322-04:00 DEBUG 18472 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:19:59.324-04:00  INFO 18472 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:20:00.098-04:00  INFO 18472 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:20:00.173-04:00  INFO 18472 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
-2026-06-04T21:20:00.729-04:00  INFO 18472 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:20:00.742-04:00  INFO 18472 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:20:00.742-04:00  INFO 18472 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:20:00.794-04:00  INFO 18472 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:20:00.794-04:00  INFO 18472 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1421 ms
-2026-06-04T21:20:00.934-04:00  INFO 18472 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:20:01.094-04:00  INFO 18472 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12219f6a
-2026-06-04T21:20:01.095-04:00  INFO 18472 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:20:01.694-04:00  INFO 18472 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:20:01.734-04:00  INFO 18472 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:20:01.736-04:00  INFO 18472 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:20:01.744-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:20:01.745-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:20:01.745-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:20:01.745-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:20:01.745-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:20:01.746-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:20:01.748-04:00  INFO 18472 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:20:01.750-04:00  INFO 18472 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:20:03.307-04:00  INFO 18472 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:20:03.333-04:00  INFO 18472 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:20:03.358-04:00  INFO 18472 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:20:03.533-04:00  INFO 18472 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:20:03.569-04:00  WARN 18472 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:20:03.577-04:00  INFO 18472 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:20:04.058-04:00  INFO 18472 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:20:04.061-04:00  INFO 18472 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:20:04.269-04:00  WARN 18472 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:20:04.467-04:00  INFO 18472 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:20:04.471-04:00  INFO 18472 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.768 seconds (process running for 6.172)
-2026-06-04T21:21:33.181-04:00  INFO 24000 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 24000 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:21:33.183-04:00 DEBUG 24000 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:21:33.184-04:00  INFO 24000 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:21:33.759-04:00  INFO 24000 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:21:33.803-04:00  INFO 24000 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
-2026-06-04T21:21:50.889-04:00  INFO 24192 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 24192 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:21:50.891-04:00 DEBUG 24192 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:21:50.892-04:00  INFO 24192 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:21:51.574-04:00  INFO 24192 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:21:51.647-04:00  INFO 24192 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
-2026-06-04T21:21:52.246-04:00  INFO 24192 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:21:52.262-04:00  INFO 24192 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:21:52.262-04:00  INFO 24192 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:21:52.323-04:00  INFO 24192 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:21:52.324-04:00  INFO 24192 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1382 ms
-2026-06-04T21:21:52.457-04:00  INFO 24192 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:21:52.623-04:00  INFO 24192 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1376883
-2026-06-04T21:21:52.626-04:00  INFO 24192 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:21:53.310-04:00  INFO 24192 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:21:53.361-04:00  INFO 24192 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:21:53.363-04:00  INFO 24192 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:21:53.372-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:21:53.373-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:21:53.373-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:21:53.373-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:21:53.374-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:21:53.374-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:21:53.375-04:00  INFO 24192 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:21:53.376-04:00  INFO 24192 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:21:54.605-04:00  INFO 24192 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:21:54.632-04:00  INFO 24192 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:21:54.655-04:00  INFO 24192 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:21:54.821-04:00  INFO 24192 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:21:54.857-04:00  WARN 24192 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:21:54.867-04:00  INFO 24192 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:21:55.363-04:00  INFO 24192 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:21:55.999-04:00  INFO 24192 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:21:56.179-04:00  WARN 24192 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:21:56.355-04:00  INFO 24192 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:21:56.361-04:00  INFO 24192 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.185 seconds (process running for 6.658)
-2026-06-04T21:22:17.112-04:00  INFO 4396 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 4396 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:22:17.115-04:00 DEBUG 4396 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:22:17.116-04:00  INFO 4396 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:22:17.880-04:00  INFO 4396 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:22:17.935-04:00  INFO 4396 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
-2026-06-04T21:22:18.478-04:00  INFO 4396 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:22:18.492-04:00  INFO 4396 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:22:18.492-04:00  INFO 4396 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:22:18.549-04:00  INFO 4396 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:22:18.551-04:00  INFO 4396 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1378 ms
-2026-06-04T21:22:18.701-04:00  INFO 4396 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:22:18.755-04:00  INFO 4396 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:22:18.794-04:00  INFO 4396 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:22:19.074-04:00  INFO 4396 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:22:19.104-04:00  INFO 4396 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:22:19.286-04:00  INFO 4396 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58882a93
-2026-06-04T21:22:19.288-04:00  INFO 4396 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:22:19.343-04:00  WARN 4396 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:22:19.362-04:00  INFO 4396 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:22:19.922-04:00  INFO 4396 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:22:19.957-04:00  INFO 4396 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:22:20.164-04:00  WARN 4396 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:22:20.379-04:00  INFO 4396 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:22:20.382-04:00  INFO 4396 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 3.836 seconds (process running for 4.269)
-2026-06-04T21:22:26.736-04:00  INFO 4396 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:22:26.737-04:00  INFO 4396 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:22:26.737-04:00  INFO 4396 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-06-04T21:22:26.758-04:00  INFO 4396 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:23:55.547-04:00  INFO 17316 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 17316 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:23:55.549-04:00 DEBUG 17316 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:23:55.551-04:00  INFO 17316 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:23:56.479-04:00  INFO 17316 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:23:56.551-04:00  INFO 17316 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
-2026-06-04T21:23:57.067-04:00  INFO 17316 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:23:57.081-04:00  INFO 17316 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:23:57.082-04:00  INFO 17316 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:23:57.132-04:00  INFO 17316 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:23:57.133-04:00  INFO 17316 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1533 ms
-2026-06-04T21:23:57.265-04:00  INFO 17316 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:23:57.437-04:00  INFO 17316 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4262fdeb
-2026-06-04T21:23:57.439-04:00  INFO 17316 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:23:58.126-04:00  INFO 17316 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:23:58.167-04:00  INFO 17316 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:23:58.169-04:00  INFO 17316 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:23:58.176-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:23:58.176-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:23:58.176-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:23:58.176-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:23:58.177-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:23:58.177-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:23:58.178-04:00  INFO 17316 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:23:58.180-04:00  INFO 17316 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:23:59.594-04:00  INFO 17316 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:23:59.625-04:00  INFO 17316 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:23:59.645-04:00  INFO 17316 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:23:59.812-04:00  INFO 17316 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:23:59.846-04:00  WARN 17316 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:23:59.856-04:00  INFO 17316 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:24:00.355-04:00  INFO 17316 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:24:00.358-04:00  INFO 17316 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:24:00.622-04:00  WARN 17316 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:24:00.885-04:00  INFO 17316 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:24:00.891-04:00  INFO 17316 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.958 seconds (process running for 6.377)
-2026-06-04T21:24:11.778-04:00  INFO 17316 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:24:11.778-04:00  INFO 17316 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:24:11.778-04:00  INFO 17316 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-06-04T21:24:11.801-04:00  INFO 17316 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:24:56.192-04:00  INFO 9756 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 9756 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:24:56.195-04:00 DEBUG 9756 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:24:56.196-04:00  INFO 9756 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:24:57.043-04:00  INFO 9756 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:24:57.109-04:00  INFO 9756 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
-2026-06-04T21:24:57.616-04:00  INFO 9756 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:24:57.629-04:00  INFO 9756 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:24:57.629-04:00  INFO 9756 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:24:57.687-04:00  INFO 9756 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:24:57.688-04:00  INFO 9756 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1438 ms
-2026-06-04T21:24:57.824-04:00  INFO 9756 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:24:57.987-04:00  INFO 9756 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0a2638
-2026-06-04T21:24:57.988-04:00  INFO 9756 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:24:58.628-04:00  INFO 9756 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:24:58.665-04:00  INFO 9756 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:24:58.668-04:00  INFO 9756 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:24:58.674-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:24:58.675-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:24:58.675-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:24:58.675-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:24:58.675-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:24:58.675-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:24:58.676-04:00  INFO 9756 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:24:58.677-04:00  INFO 9756 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:25:00.197-04:00  INFO 9756 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:25:00.226-04:00  INFO 9756 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:25:00.250-04:00  INFO 9756 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:25:00.421-04:00  INFO 9756 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:25:00.463-04:00  WARN 9756 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:25:00.473-04:00  INFO 9756 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:25:01.014-04:00  INFO 9756 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:25:01.016-04:00  INFO 9756 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:25:01.226-04:00  WARN 9756 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:25:01.453-04:00  INFO 9756 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:25:01.458-04:00  INFO 9756 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.8 seconds (process running for 6.293)
-2026-06-04T21:27:11.516-04:00  INFO 9756 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:27:11.517-04:00  INFO 9756 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:27:11.518-04:00  INFO 9756 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-06-04T21:27:11.539-04:00  INFO 9756 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:29:16.880-04:00  INFO 19816 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 19816 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:29:16.882-04:00 DEBUG 19816 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:29:16.883-04:00  INFO 19816 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:29:17.621-04:00  INFO 19816 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:29:17.702-04:00  INFO 19816 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
-2026-06-04T21:29:18.311-04:00  INFO 19816 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:29:18.328-04:00  INFO 19816 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:29:18.329-04:00  INFO 19816 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:29:18.390-04:00  INFO 19816 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:29:18.391-04:00  INFO 19816 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1463 ms
-2026-06-04T21:29:18.551-04:00  INFO 19816 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:29:18.739-04:00  INFO 19816 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69cd7630
-2026-06-04T21:29:18.742-04:00  INFO 19816 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:29:19.385-04:00  INFO 19816 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:29:19.423-04:00  INFO 19816 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:29:19.425-04:00  INFO 19816 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:29:19.436-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:29:19.436-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:29:19.436-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:29:19.436-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:29:19.436-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:29:19.437-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:29:19.438-04:00  INFO 19816 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:29:19.439-04:00  INFO 19816 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:29:20.981-04:00  INFO 19816 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:29:21.015-04:00  INFO 19816 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:29:21.037-04:00  INFO 19816 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:29:21.208-04:00  INFO 19816 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:29:21.249-04:00  WARN 19816 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:29:21.259-04:00  INFO 19816 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:29:21.743-04:00  INFO 19816 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:29:21.746-04:00  INFO 19816 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:29:21.956-04:00  WARN 19816 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:29:22.159-04:00  INFO 19816 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:29:22.162-04:00  INFO 19816 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.803 seconds (process running for 6.231)
-2026-06-04T21:29:39.614-04:00  INFO 19816 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:29:39.614-04:00  INFO 19816 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:29:39.616-04:00  INFO 19816 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-06-04T21:29:39.636-04:00  INFO 19816 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:30:23.324-04:00  INFO 23504 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 23504 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:30:23.326-04:00 DEBUG 23504 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:30:23.327-04:00  INFO 23504 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:30:24.039-04:00  INFO 23504 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:30:24.104-04:00  INFO 23504 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
-2026-06-04T21:30:24.587-04:00  INFO 23504 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:30:24.603-04:00  INFO 23504 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:30:24.603-04:00  INFO 23504 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:30:24.662-04:00  INFO 23504 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:30:24.663-04:00  INFO 23504 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1285 ms
-2026-06-04T21:30:24.792-04:00  INFO 23504 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:30:24.942-04:00  INFO 23504 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0a2638
-2026-06-04T21:30:24.944-04:00  INFO 23504 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:30:25.563-04:00  INFO 23504 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:30:25.596-04:00  INFO 23504 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:30:25.597-04:00  INFO 23504 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:30:25.602-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:30:25.603-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:30:25.603-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:30:25.603-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:30:25.603-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:30:25.603-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:30:25.604-04:00  INFO 23504 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:30:25.605-04:00  INFO 23504 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:30:27.155-04:00  INFO 23504 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:30:27.185-04:00  INFO 23504 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:30:27.205-04:00  INFO 23504 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:30:27.372-04:00  INFO 23504 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:30:27.408-04:00  WARN 23504 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:30:27.418-04:00  INFO 23504 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:30:27.948-04:00  INFO 23504 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:30:27.951-04:00  INFO 23504 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:30:28.180-04:00  WARN 23504 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:30:28.425-04:00  INFO 23504 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:30:28.430-04:00  INFO 23504 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.626 seconds (process running for 6.061)
-2026-06-04T21:30:34.165-04:00  INFO 23504 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:30:34.165-04:00  INFO 23504 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:30:34.167-04:00  INFO 23504 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-06-04T21:30:34.188-04:00  INFO 23504 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/1
-2026-06-04T21:32:17.487-04:00  INFO 18648 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 18648 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:32:17.490-04:00 DEBUG 18648 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:32:17.491-04:00  INFO 18648 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:32:18.403-04:00  INFO 18648 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:32:18.469-04:00  INFO 18648 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
-2026-06-04T21:32:19.152-04:00  INFO 18648 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:32:19.172-04:00  INFO 18648 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:32:19.173-04:00  INFO 18648 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:32:19.239-04:00  INFO 18648 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:32:19.240-04:00  INFO 18648 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
-2026-06-04T21:32:19.406-04:00  INFO 18648 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:32:19.626-04:00  INFO 18648 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4262fdeb
-2026-06-04T21:32:19.629-04:00  INFO 18648 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:32:20.401-04:00  INFO 18648 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:32:20.443-04:00  INFO 18648 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:32:20.445-04:00  INFO 18648 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:32:20.453-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:32:20.453-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:32:20.453-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:32:20.453-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:32:20.453-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:32:20.453-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:32:20.455-04:00  INFO 18648 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:32:20.456-04:00  INFO 18648 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:32:21.818-04:00  INFO 18648 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:32:21.845-04:00  INFO 18648 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:32:21.864-04:00  INFO 18648 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:32:22.026-04:00  INFO 18648 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:32:22.063-04:00  WARN 18648 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:32:22.071-04:00  INFO 18648 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:32:22.613-04:00  INFO 18648 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:32:22.617-04:00  INFO 18648 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:32:22.881-04:00  WARN 18648 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:32:23.133-04:00  INFO 18648 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:32:23.139-04:00  INFO 18648 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.363 seconds (process running for 6.835)
-2026-06-04T21:32:52.300-04:00  INFO 18648 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-04T21:32:52.300-04:00  INFO 18648 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-04T21:32:52.301-04:00  INFO 18648 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-04T21:32:52.322-04:00  INFO 18648 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : GET /api/reservas/7
-2026-06-04T21:32:52.359-04:00  WARN 18648 --- [reservas-service] [http-nio-8085-exec-1] c.r.controller.ReservasController        : Error buscando reserva id=7 - Reserva no encontrada
-2026-06-04T21:45:52.025-04:00  INFO 19988 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Starting ReservasServiceApplication using Java 25.0.1 with PID 19988 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\reservas-service)
-2026-06-04T21:45:52.027-04:00 DEBUG 19988 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-04T21:45:52.027-04:00  INFO 19988 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2026-06-04T21:45:52.867-04:00  INFO 19988 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04T21:45:52.935-04:00  INFO 19988 --- [reservas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
-2026-06-04T21:45:53.548-04:00  INFO 19988 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2026-06-04T21:45:53.562-04:00  INFO 19988 --- [reservas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-04T21:45:53.563-04:00  INFO 19988 --- [reservas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-04T21:45:53.629-04:00  INFO 19988 --- [reservas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-04T21:45:53.629-04:00  INFO 19988 --- [reservas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1540 ms
-2026-06-04T21:45:53.750-04:00  INFO 19988 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-04T21:45:53.923-04:00  INFO 19988 --- [reservas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4262fdeb
-2026-06-04T21:45:53.925-04:00  INFO 19988 --- [reservas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-04T21:45:54.574-04:00  INFO 19988 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:45:54.615-04:00  INFO 19988 --- [reservas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-04T21:45:54.617-04:00  INFO 19988 --- [reservas-service] [main] liquibase.changelog                      : Reading from db_reservas.databasechangelog
-2026-06-04T21:45:54.626-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-04T21:45:54.626-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : Run:                          0
-2026-06-04T21:45:54.626-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : Previously run:               1
-2026-06-04T21:45:54.627-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-04T21:45:54.627-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : -------------------------------
-2026-06-04T21:45:54.627-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : Total change sets:            1
-2026-06-04T21:45:54.628-04:00  INFO 19988 --- [reservas-service] [main] liquibase.util                           : Update summary generated
-2026-06-04T21:45:54.629-04:00  INFO 19988 --- [reservas-service] [main] liquibase.command                        : Command execution complete
-2026-06-04T21:45:56.139-04:00  INFO 19988 --- [reservas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-04T21:45:56.169-04:00  INFO 19988 --- [reservas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-04T21:45:56.188-04:00  INFO 19988 --- [reservas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-04T21:45:56.353-04:00  INFO 19988 --- [reservas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-04T21:45:56.388-04:00  WARN 19988 --- [reservas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-04T21:45:56.401-04:00  INFO 19988 --- [reservas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-04T21:45:56.895-04:00  INFO 19988 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-04T21:45:56.898-04:00  INFO 19988 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04T21:45:57.116-04:00  WARN 19988 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-04T21:45:57.311-04:00  INFO 19988 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
-2026-06-04T21:45:57.315-04:00  INFO 19988 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 5.886 seconds (process running for 6.321)
+2026-06-06T00:48:29.842-04:00  INFO 18960 --- [reservas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-06T00:48:29.845-04:00  INFO 18960 --- [reservas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-06T00:48:30.168-04:00  WARN 18960 --- [reservas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-06T00:48:30.514-04:00  INFO 18960 --- [reservas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-06-06T00:48:30.519-04:00  INFO 18960 --- [reservas-service] [main] c.reservas.ReservasServiceApplication    : Started ReservasServiceApplication in 6.814 seconds (process running for 7.59)
+2026-06-06T00:49:42.148-04:00  INFO 18960 --- [reservas-service] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-06T00:49:42.148-04:00  INFO 18960 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-06T00:49:42.148-04:00  INFO 18960 --- [reservas-service] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-06T00:49:42.448-04:00  INFO 18960 --- [reservas-service] [http-nio-8085-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 127 ms
