@@ -160,7 +160,7 @@ public class FuncionService {
     @SuppressWarnings("unchecked")
     private Map<String, Object> obtenerPelicula(Long peliculaId) {
         try {
-            String url = "http://localhost:8084/api/peliculas/" + peliculaId;
+            String url = "http://peliculas-service:8084/api/peliculas/" + peliculaId;
             return restTemplate.getForObject(url, Map.class);
         } catch (RestClientException e) {
             throw new RuntimeException("La película con ID " + peliculaId + " no existe en el servicio de películas");
@@ -171,7 +171,7 @@ public class FuncionService {
     @SuppressWarnings("unchecked")
     private Map<String, Object> obtenerSala(Long salaId) {
         try {
-            String url = "http://localhost:8083/api/salas/" + salaId;
+            String url = "http://salas-service:8083/api/salas/" + salaId;
             return restTemplate.getForObject(url, Map.class);
         } catch (RestClientException e) {
             throw new RuntimeException("La sala con ID " + salaId + " no existe en el servicio de salas");

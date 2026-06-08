@@ -1,99 +1,125 @@
 package com.producto.controller;
 
-import com.producto.DTO.ProductoDTO;
-import com.producto.service.ProductoService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.producto.DTO.ProductoDTO;
+import com.producto.service.ProductoService;
+
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/productos")
 @RequiredArgsConstructor
-@Tag(name = "Productos", description = "Sistema para gestionar nuestros productos")
 public class ProductoController {
 
     private final ProductoService productoService;
+    private static final Logger logger = LoggerFactory.getLogger(ProductoController.class);
 
     @GetMapping
-    @Operation(summary = "Listar productos", description = "Obtiene todos los productos registrados")
     public ResponseEntity<?> getAll() {
+        logger.info("GET /api/productos");
         try {
-            return ResponseEntity.ok(productoService.getAll());
+            List<ProductoDTO> productos = productoService.getAll();
+            logger.debug("Cantidad de productos obtenidos: {}", productos.size());
+            return ResponseEntity.ok(productos);
         } catch (RuntimeException ex) {
+            logger.warn("Error obteniendo productos - {}", ex.getMessage());
+            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+        }
+    }
+
+    @GetMapping("/nombre/{nombre}")
+    public ResponseEntity<?> getByName(@PathVariable String nombre) {
+        logger.info("GET /api/productos/nombre/{}", nombre);
+        try {
+            List<ProductoDTO> productos = productoService.getByName(nombre);
+            logger.debug("Cantidad de productos obtenidos: {}", productos.size());
+            return ResponseEntity.ok(productos);
+        } catch (RuntimeException ex) {
+            logger.warn("Error obteniendo productos - {}", ex.getMessage());
             return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
         }
     }
 
     @GetMapping("/{id}")
-    @Operation(summary = "Buscar producto por ID", description = "Obtiene un producto usando su ID")
     public ResponseEntity<?> getById(@PathVariable Long id) {
+        logger.info("GET /api/productos/{}", id);
         try {
             return ResponseEntity.ok(productoService.getById(id));
         } catch (RuntimeException ex) {
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+            logger.warn("Error buscando producto id={} - {}", id, ex.getMessage());
+            return ResponseEntity.badRequest().body(ex.getMessage());
         }
     }
 
     @PostMapping
-    @Operation(summary = "Crear producto", description = "Crea un nuevo producto")
     public ResponseEntity<?> save(@Valid @RequestBody ProductoDTO dto, BindingResult bindingResult) {
+        logger.info("POST /api/productos - nombre={}", dto.getNombre());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-
-            bindingResult.getFieldErrors().forEach(error ->
-                    errores.put(error.getField(), error.getDefaultMessage())
-            );
-
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
-
         try {
-            return ResponseEntity.ok(productoService.save(dto));
+            ProductoDTO guardado = productoService.save(dto);
+            logger.info("Producto creado exitosamente id={}", guardado.getId());
+            return ResponseEntity.ok(guardado);
         } catch (RuntimeException ex) {
+            logger.warn("Error creando producto nombre={} - {}", dto.getNombre(), ex.getMessage());
             return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
         }
     }
 
     @PutMapping("/{id}")
-    @Operation(summary = "Actualizar producto", description = "Actualiza un producto existente usando su ID")
-    public ResponseEntity<?> update(
-            @PathVariable Long id,
-            @Valid @RequestBody ProductoDTO dto,
-            BindingResult bindingResult) {
-
+    public ResponseEntity<?> update(@PathVariable Long id, @Valid @RequestBody ProductoDTO dto, BindingResult bindingResult) {
+        logger.info("PUT /api/productos/{} - nombre={}", id, dto.getNombre());
         if (bindingResult.hasErrors()) {
-            Map<String, String> errores = new HashMap<>();
-
-            bindingResult.getFieldErrors().forEach(error ->
-                    errores.put(error.getField(), error.getDefaultMessage())
-            );
-
-            return ResponseEntity.badRequest().body(errores);
+            List<String> errors = bindingResult.getAllErrors()
+                    .stream()
+                    .map(error -> error.getDefaultMessage())
+                    .collect(Collectors.toList());
+            logger.warn("Errores de validación: {}", errors);
+            return ResponseEntity.badRequest().body(errors);
         }
-
         try {
-            return ResponseEntity.ok(productoService.update(id, dto));
+            ProductoDTO actualizado = productoService.update(id, dto);
+            logger.info("Producto actualizado exitosamente id={}", id);
+            return ResponseEntity.ok(actualizado);
         } catch (RuntimeException ex) {
+            logger.warn("Error actualizando producto id={} - {}", id, ex.getMessage());
             return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
         }
     }
 
     @DeleteMapping("/{id}")
-    @Operation(summary = "Eliminar producto", description = "Elimina un producto usando su ID")
     public ResponseEntity<?> delete(@PathVariable Long id) {
+        logger.info("DELETE /api/productos/{}", id);
         try {
             productoService.delete(id);
+            logger.info("Producto eliminado exitosamente id={}", id);
             return ResponseEntity.ok(Map.of("mensaje", "Producto eliminado correctamente"));
         } catch (RuntimeException ex) {
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+            logger.warn("Error eliminando producto id={} - {}", id, ex.getMessage());
+            return ResponseEntity.badRequest().body(ex.getMessage());
         }
     }
 }
-

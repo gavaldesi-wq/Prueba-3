@@ -23,6 +23,10 @@ cd pagos-service
 call .\mvnw clean package -DskipTests
 cd ..
 
+cd producto-service
+call .\mvnw clean package -DskipTests
+cd ..
+
 cd api-getaway
 call .\mvnw clean package -DskipTests
 cd ..

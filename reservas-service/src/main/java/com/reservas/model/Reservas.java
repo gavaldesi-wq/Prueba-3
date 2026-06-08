@@ -16,15 +16,34 @@ import jakarta.persistence.GenerationType;
 @AllArgsConstructor
 public class Reservas {
 
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private Long usuarioId;
+
     @Column(nullable = false)
     private Long funcionId;
+
+    @Column(nullable = false)
+    private String peliculaTitulo;
+
     @Column(nullable = false)
     private Integer cantidadEntradas;
+
     @Column(nullable = false)
     private String estado;
+
+    @Column(columnDefinition = "TEXT")
+    private String productosJson;
+
+    @Column(nullable = false)
+    private Double totalProductos;
+
+    @Column(nullable = false)
+    private Double totalEntradas;
+
+    @Column(nullable = false)
+    private Double totalGeneral;
 }
