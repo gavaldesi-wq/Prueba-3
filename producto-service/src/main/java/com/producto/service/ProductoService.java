@@ -25,6 +25,13 @@ public class ProductoService {
                 .collect(Collectors.toList());
     }
 
+      public List<ProductoDTO> getByName(String nombre) {
+        return productoRepository.findByNombre(nombre)
+                .stream()
+                .map(ProductoDTO::fromModel)
+                .collect(Collectors.toList());
+    }
+
     // Busca un producto por su ID
     public ProductoDTO getById(Long id) {
         Producto producto = productoRepository.findById(id)

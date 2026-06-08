@@ -7,48 +7,67 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     ports:
       - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   usuario-service:
     build: ./usuario-service
     ports:
       - "8081:8081"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
 
   sala-service:
     build: ./sala-service
     ports:
       - "8083:8083"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
 
   peliculas-service:
     build: ./peliculas-service
     ports:
       - "8084:8084"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
 
   cinefunciones-service:
     build: ./cinefunciones-service
     ports:
       - "8082:8082"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
 
   reservas-service:
     build: ./reservas-service
     ports:
       - "8085:8085"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
 
   pagos-service:
     build: ./pagos-service
     ports:
       - "8086:8086"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
+
+  producto-service:
+    build: ./producto-service
+    ports:
+      - "8087:8087"
+    depends_on:
+      mysql:
+        condition: service_healthy
 
   api-gateway:
     build: ./api-getaway
@@ -61,3 +80,4 @@ services:
       - cinefunciones-service
       - reservas-service
       - pagos-service
+      - producto-service

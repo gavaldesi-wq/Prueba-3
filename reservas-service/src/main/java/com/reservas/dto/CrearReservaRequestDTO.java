@@ -3,6 +3,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import java.util.List;
 
 @Data
 public class CrearReservaRequestDTO {
@@ -18,5 +19,7 @@ public class CrearReservaRequestDTO {
     @NotNull(message = "La cantidad de entradas es obligatoria")
     @Min(value = 1, message = "Debe comprar al menos 1 entrada")
     private Integer cantidadEntradas;
+
+    private List<ProductoReservaDTO> productos;
 }
 

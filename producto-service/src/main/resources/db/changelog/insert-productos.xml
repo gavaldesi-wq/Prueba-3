@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="2" author="gabriel">
+
+        <insert tableName="productos">
+            <column name="nombre" value="Cabritas pequeñas"/>
+            <column name="precio" value="2500"/>
+        </insert>
+
+        <insert tableName="productos">
+            <column name="nombre" value="Cabritas grandes"/>
+            <column name="precio" value="3500"/>
+        </insert>
+
+        <insert tableName="productos">
+            <column name="nombre" value="Bebida pequeña"/>
+            <column name="precio" value="1500"/>
+        </insert>
+
+        <insert tableName="productos">
+            <column name="nombre" value="Bebida grande"/>
+            <column name="precio" value="2000"/>
+        </insert>
+
+        <insert tableName="productos">
+            <column name="nombre" value="Combo cabritas + bebida"/>
+            <column name="precio" value="4500"/>
+        </insert>
+
+        <insert tableName="productos">
+            <column name="nombre" value="Hot dog"/>
+            <column name="precio" value="3000"/>
+        </insert>
+
+        <insert tableName="productos">
+            <column name="nombre" value="Nachos"/>
+            <column name="precio" value="3200"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
