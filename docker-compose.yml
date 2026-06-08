@@ -1,0 +1,63 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+
+  usuario-service:
+    build: ./usuario-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+
+  sala-service:
+    build: ./sala-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - mysql
+
+  peliculas-service:
+    build: ./peliculas-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mysql
+
+  cinefunciones-service:
+    build: ./cinefunciones-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql
+
+  reservas-service:
+    build: ./reservas-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - mysql
+
+  pagos-service:
+    build: ./pagos-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mysql
+
+  api-gateway:
+    build: ./api-getaway
+    ports:
+      - "9090:9090"
+    depends_on:
+      - usuario-service
+      - sala-service
+      - peliculas-service
+      - cinefunciones-service
+      - reservas-service
+      - pagos-service

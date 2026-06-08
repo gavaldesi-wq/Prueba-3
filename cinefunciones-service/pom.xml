@@ -52,7 +52,12 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
         </dependency>
-        
+
+        <dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
+		</dependency>
         
         <!-- Validation - Para validar DTOs con @Valid, @NotNull, @NotBlank, @Pattern, etc. -->
         <dependency>

@@ -1,5 +1,5 @@
 server:
-  port: 9090  # EL PUERTO GATEWAY SHAN SHAN SHANN
+  port: 9090
 
 spring:
   main:
@@ -7,37 +7,32 @@ spring:
   cloud:
     gateway:
       routes:
-        #Microservicio de usuarios
         - id: usuarios-service
-          uri: http://localhost:8081
+          uri: http://usuario-service:8081
           predicates:
             - Path=/api/usuarios/**
           
-          
-        # Microservicio de peliculas
         - id: peliculas-service
-          uri: http://localhost:8084
+          uri: http://peliculas-service:8084
           predicates:
             - Path=/api/peliculas/**, /api/generos/**
         
-        # Microservicio de salas
         - id: salas-service
-          uri: http://localhost:8083
+          uri: http://sala-service:8083
           predicates:
             - Path=/api/salas/**
 
-        
         - id: funciones-service
-          uri: http://localhost:8082
+          uri: http://cinefunciones-service:8082
           predicates:
             - Path=/api/funciones/**
 
         - id: reservas-service
-          uri: http://localhost:8085
+          uri: http://reservas-service:8085
           predicates:
             - Path=/api/reservas/**
 
         - id: pagos-service
-          uri: http://localhost:8086
+          uri: http://pagos-service:8086
           predicates:
             - Path=/api/pagos/**
