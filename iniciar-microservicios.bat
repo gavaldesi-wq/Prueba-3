@@ -1,16 +1,31 @@
 @echo off
+cd usuario-service
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd usuario-service && mvnw spring-boot:run"
+cd sala-service
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd sala-service && mvnw spring-boot:run"
+cd peliculas-service
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd peliculas-service && mvnw spring-boot:run"
+cd cinefunciones-service
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd cinefunciones-service && mvnw spring-boot:run"
+cd reservas-service
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd reservas-service && mvnw spring-boot:run"
+cd pagos-service
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd pagos-service && mvnw spring-boot:run"
+cd api-getaway
+call .\mvnw clean package -DskipTests
+cd ..
 
-start cmd /k "cd api-getaway && mvnw spring-boot:run"
-
+echo TODOS COMPILADOS
+pause

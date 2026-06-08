@@ -1,172 +1,108 @@
-2026-06-06T00:28:30.505-04:00  INFO 19372 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 25.0.1 with PID 19372 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service)
-2026-06-06T00:28:30.516-04:00 DEBUG 19372 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-06T00:28:30.517-04:00  INFO 19372 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-06-06T00:28:31.630-04:00  INFO 19372 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-06T00:28:31.707-04:00  INFO 19372 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
-2026-06-06T00:28:32.227-04:00  INFO 19372 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-06-06T00:28:32.247-04:00  INFO 19372 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-06T00:28:32.250-04:00  INFO 19372 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-06T00:28:32.323-04:00  INFO 19372 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-06T00:28:32.324-04:00  INFO 19372 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1721 ms
-2026-06-06T00:28:32.496-04:00  INFO 19372 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-06T00:28:32.688-04:00  INFO 19372 --- [peliculas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72543547
-2026-06-06T00:28:32.689-04:00  INFO 19372 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-06T00:28:33.599-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:28:33.709-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-06T00:28:33.712-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:28:33.719-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-06T00:28:33.719-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : Run:                          0
-2026-06-06T00:28:33.719-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : Previously run:               3
-2026-06-06T00:28:33.719-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-06T00:28:33.719-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : -------------------------------
-2026-06-06T00:28:33.719-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : Total change sets:            3
-2026-06-06T00:28:33.720-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.util                           : Update summary generated
-2026-06-06T00:28:33.721-04:00  INFO 19372 --- [peliculas-service] [main] liquibase.command                        : Command execution complete
-2026-06-06T00:28:34.991-04:00  INFO 19372 --- [peliculas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-06T00:28:35.021-04:00  INFO 19372 --- [peliculas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-06T00:28:35.045-04:00  INFO 19372 --- [peliculas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-06T00:28:35.239-04:00  INFO 19372 --- [peliculas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-06T00:28:35.289-04:00  WARN 19372 --- [peliculas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-06T00:28:35.302-04:00  INFO 19372 --- [peliculas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-06T00:28:35.853-04:00  INFO 19372 --- [peliculas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-06T00:28:35.856-04:00  INFO 19372 --- [peliculas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-06T00:28:36.070-04:00  WARN 19372 --- [peliculas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-06T00:28:36.294-04:00  INFO 19372 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-06-06T00:28:36.299-04:00  INFO 19372 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Started PeliculasServiceApplication in 6.565 seconds (process running for 6.997)
-2026-06-06T00:31:14.278-04:00  INFO 12296 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 25.0.1 with PID 12296 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service)
-2026-06-06T00:31:14.279-04:00 DEBUG 12296 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-06T00:31:14.281-04:00  INFO 12296 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-06-06T00:31:15.199-04:00  INFO 12296 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-06T00:31:15.282-04:00  INFO 12296 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
-2026-06-06T00:31:15.902-04:00  INFO 12296 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-06-06T00:31:15.925-04:00  INFO 12296 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-06T00:31:15.929-04:00  INFO 12296 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-06T00:31:16.010-04:00  INFO 12296 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-06T00:31:16.011-04:00  INFO 12296 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1653 ms
-2026-06-06T00:31:16.194-04:00  INFO 12296 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-06T00:31:16.409-04:00  INFO 12296 --- [peliculas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e957e2f
-2026-06-06T00:31:16.412-04:00  INFO 12296 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-06T00:31:17.162-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:31:17.250-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-06T00:31:17.254-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:31:17.262-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-06T00:31:17.262-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : Run:                          0
-2026-06-06T00:31:17.263-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : Previously run:               3
-2026-06-06T00:31:17.263-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-06T00:31:17.263-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : -------------------------------
-2026-06-06T00:31:17.263-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : Total change sets:            3
-2026-06-06T00:31:17.264-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.util                           : Update summary generated
-2026-06-06T00:31:17.265-04:00  INFO 12296 --- [peliculas-service] [main] liquibase.command                        : Command execution complete
-2026-06-06T00:31:18.573-04:00  INFO 12296 --- [peliculas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-06T00:31:18.609-04:00  INFO 12296 --- [peliculas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-06T00:31:18.637-04:00  INFO 12296 --- [peliculas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-06T00:31:18.859-04:00  INFO 12296 --- [peliculas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-06T00:31:18.913-04:00  WARN 12296 --- [peliculas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-06T00:31:18.924-04:00  INFO 12296 --- [peliculas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-06T00:31:19.564-04:00  INFO 12296 --- [peliculas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-06T00:31:19.567-04:00  INFO 12296 --- [peliculas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-06T00:31:19.816-04:00  WARN 12296 --- [peliculas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-06T00:31:20.036-04:00  INFO 12296 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-06-06T00:31:20.042-04:00  INFO 12296 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Started PeliculasServiceApplication in 6.463 seconds (process running for 7.019)
-2026-06-06T00:46:04.844-04:00  INFO 2272 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 25.0.1 with PID 2272 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service)
-2026-06-06T00:46:04.847-04:00 DEBUG 2272 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-06T00:46:04.850-04:00  INFO 2272 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-06-06T00:46:05.566-04:00  INFO 2272 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-06T00:46:05.615-04:00  INFO 2272 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
-2026-06-06T00:46:05.998-04:00  INFO 2272 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-06-06T00:46:06.009-04:00  INFO 2272 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-06T00:46:06.010-04:00  INFO 2272 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-06T00:46:06.052-04:00  INFO 2272 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-06T00:46:06.052-04:00  INFO 2272 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1155 ms
-2026-06-06T00:46:06.149-04:00  INFO 2272 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-06T00:46:06.294-04:00  INFO 2272 --- [peliculas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66e827a8
-2026-06-06T00:46:06.295-04:00  INFO 2272 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-06T00:46:06.868-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:46:06.924-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-06T00:46:06.927-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:46:06.932-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-06T00:46:06.932-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : Run:                          0
-2026-06-06T00:46:06.933-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : Previously run:               3
-2026-06-06T00:46:06.933-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-06T00:46:06.933-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : -------------------------------
-2026-06-06T00:46:06.933-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : Total change sets:            3
-2026-06-06T00:46:06.934-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.util                           : Update summary generated
-2026-06-06T00:46:06.935-04:00  INFO 2272 --- [peliculas-service] [main] liquibase.command                        : Command execution complete
-2026-06-06T00:46:08.060-04:00  INFO 2272 --- [peliculas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-06T00:46:08.091-04:00  INFO 2272 --- [peliculas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-06T00:46:08.113-04:00  INFO 2272 --- [peliculas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-06T00:46:08.273-04:00  INFO 2272 --- [peliculas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-06T00:46:08.317-04:00  WARN 2272 --- [peliculas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-06T00:46:08.326-04:00  INFO 2272 --- [peliculas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-06T00:46:08.833-04:00  INFO 2272 --- [peliculas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-06T00:46:08.835-04:00  INFO 2272 --- [peliculas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-06T00:46:09.101-04:00  WARN 2272 --- [peliculas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-06T00:46:09.342-04:00  INFO 2272 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-06-06T00:46:09.347-04:00  INFO 2272 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Started PeliculasServiceApplication in 5.125 seconds (process running for 5.552)
-2026-06-06T00:48:24.952-04:00  INFO 21940 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 25.0.1 with PID 21940 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service)
-2026-06-06T00:48:24.955-04:00 DEBUG 21940 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-06T00:48:24.956-04:00  INFO 21940 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-06-06T00:48:26.008-04:00  INFO 21940 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-06T00:48:26.149-04:00  INFO 21940 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 2 JPA repository interfaces.
-2026-06-06T00:48:26.757-04:00  INFO 21940 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-06-06T00:48:26.784-04:00  INFO 21940 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-06T00:48:26.785-04:00  INFO 21940 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-06T00:48:26.871-04:00  INFO 21940 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-06T00:48:26.873-04:00  INFO 21940 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1860 ms
-2026-06-06T00:48:27.026-04:00  INFO 21940 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-06T00:48:27.231-04:00  INFO 21940 --- [peliculas-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66e827a8
-2026-06-06T00:48:27.233-04:00  INFO 21940 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-06T00:48:27.863-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:48:27.936-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
-2026-06-06T00:48:27.939-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.changelog                      : Reading from db_peliculas.databasechangelog
-2026-06-06T00:48:27.947-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : UPDATE SUMMARY
-2026-06-06T00:48:27.948-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : Run:                          0
-2026-06-06T00:48:27.948-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : Previously run:               3
-2026-06-06T00:48:27.950-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : Filtered out:                 0
-2026-06-06T00:48:27.951-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : -------------------------------
-2026-06-06T00:48:27.951-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : Total change sets:            3
-2026-06-06T00:48:27.952-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.util                           : Update summary generated
-2026-06-06T00:48:27.953-04:00  INFO 21940 --- [peliculas-service] [main] liquibase.command                        : Command execution complete
-2026-06-06T00:48:29.138-04:00  INFO 21940 --- [peliculas-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-06T00:48:29.176-04:00  INFO 21940 --- [peliculas-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
-2026-06-06T00:48:29.205-04:00  INFO 21940 --- [peliculas-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-06T00:48:29.448-04:00  INFO 21940 --- [peliculas-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-06T00:48:29.504-04:00  WARN 21940 --- [peliculas-service] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-06T00:48:29.515-04:00  INFO 21940 --- [peliculas-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-06-06T00:48:30.178-04:00  INFO 21940 --- [peliculas-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-06T00:48:30.182-04:00  INFO 21940 --- [peliculas-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-06T00:48:30.520-04:00  WARN 21940 --- [peliculas-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-06T00:48:30.768-04:00  INFO 21940 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-06-06T00:48:30.773-04:00  INFO 21940 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Started PeliculasServiceApplication in 6.506 seconds (process running for 6.994)
-2026-06-06T00:49:35.462-04:00  INFO 21940 --- [peliculas-service] [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-06T00:49:35.463-04:00  INFO 21940 --- [peliculas-service] [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-06T00:49:35.464-04:00  INFO 21940 --- [peliculas-service] [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-06-06T00:49:35.795-04:00  INFO 21940 --- [peliculas-service] [http-nio-8084-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 156 ms
+2026-06-07T23:56:54.010-04:00  INFO 15328 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 25.0.1 with PID 15328 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service)
+2026-06-07T23:56:54.017-04:00 DEBUG 15328 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07T23:56:54.027-04:00  INFO 15328 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-06-07T23:56:55.306-04:00  INFO 15328 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07T23:56:55.377-04:00  INFO 15328 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2026-06-07T23:56:55.975-04:00  INFO 15328 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-06-07T23:56:55.990-04:00  INFO 15328 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-07T23:56:55.991-04:00  INFO 15328 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-07T23:56:56.050-04:00  INFO 15328 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-07T23:56:56.050-04:00  INFO 15328 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1898 ms
+2026-06-07T23:56:56.177-04:00  INFO 15328 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-07T23:56:59.972-04:00  WARN 15328 --- [peliculas-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-06-07T23:56:59.975-04:00  INFO 15328 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-07T23:56:59.983-04:00  INFO 15328 --- [peliculas-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-07T23:56:59.997-04:00 ERROR 15328 --- [peliculas-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:974) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.18.jar:6.2.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.14.jar:3.5.14]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.14.jar:3.5.14]
+	at com.peliculas.PeliculasServiceApplication.main(PeliculasServiceApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 10 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.18.jar:6.2.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.18.jar:6.2.18]
+	... 17 common frames omitted
+Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:280) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	... 19 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.3.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:275) ~[liquibase-core-4.31.1.jar:na]
+	... 24 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 35 common frames omitted
+Caused by: java.net.UnknownHostException: Host desconocido (mysql)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 38 common frames omitted
+
