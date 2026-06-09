@@ -1,5 +1,6 @@
 package com.pagos.controller;
 
+import com.pagos.dto.BoletaDTO;
 import com.pagos.dto.CrearPagoRequestDTO;
 import com.pagos.dto.PagosDTO;
 import com.pagos.service.PagosService;
@@ -70,6 +71,7 @@ public class PagosController {
     public ResponseEntity<?> pagarReserva(
             @Valid @RequestBody CrearPagoRequestDTO request,
             BindingResult bindingResult) {
+
         log.info("POST /api/pagos/pagar - reservaId={}",
                 request.getReservaId());
         if (bindingResult.hasErrors()) {
@@ -81,11 +83,9 @@ public class PagosController {
             return ResponseEntity.badRequest().body(errors);
         }
         try {
-            PagosDTO pago =
-                    pagosService.pagarReserva(request);
-            log.info("Pago creado exitosamente id={}",
-                    pago.getId());
-            return ResponseEntity.ok(pago);
+            BoletaDTO boleta = pagosService.pagarReserva(request);
+             log.info("Pago creado exitosamente id={}", boleta.getPagoId());
+        return ResponseEntity.ok(boleta);
         } catch (RuntimeException ex) {
             log.warn("Error procesando pago - {}", ex.getMessage());
             return ResponseEntity.badRequest()

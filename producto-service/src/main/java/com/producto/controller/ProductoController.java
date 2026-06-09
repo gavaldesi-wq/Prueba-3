@@ -45,17 +45,13 @@ public class ProductoController {
     }
 
     @GetMapping("/nombre/{nombre}")
-    public ResponseEntity<?> getByName(@PathVariable String nombre) {
-        logger.info("GET /api/productos/nombre/{}", nombre);
+    public ResponseEntity<?> getByNombre(@PathVariable String nombre) {
         try {
-            List<ProductoDTO> productos = productoService.getByName(nombre);
-            logger.debug("Cantidad de productos obtenidos: {}", productos.size());
-            return ResponseEntity.ok(productos);
+            return ResponseEntity.ok(productoService.getByNombre(nombre));
         } catch (RuntimeException ex) {
-            logger.warn("Error obteniendo productos - {}", ex.getMessage());
             return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
         }
-    }
+}
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {

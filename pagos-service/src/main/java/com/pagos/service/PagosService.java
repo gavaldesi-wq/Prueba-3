@@ -1,5 +1,7 @@
 package com.pagos.service;
 
+
+import com.pagos.dto.BoletaDTO;
 import com.pagos.dto.CrearPagoRequestDTO;
 import com.pagos.dto.PagosDTO;
 import com.pagos.model.Pagos;
@@ -19,6 +21,7 @@ public class PagosService {
 
     private final PagosRepository pagosRepository;
     private final RestTemplate restTemplate;
+    
 
     public List<PagosDTO> getAll() {
 
@@ -44,20 +47,41 @@ public class PagosService {
     }
 
 
-    public PagosDTO pagarReserva(CrearPagoRequestDTO request) {
+    public BoletaDTO pagarReserva(CrearPagoRequestDTO request) {
 
-        obtenerReserva(request.getReservaId());
+        Map<String, Object> reserva = obtenerReserva(request.getReservaId());
+
+        String peliculaTitulo = (String) reserva.get("peliculaTitulo");
+        Long funcionId = Long.valueOf(reserva.get("funcionId").toString());
+        Integer cantidadEntradas = Integer.valueOf(reserva.get("cantidadEntradas").toString());
+        Double totalEntradas = Double.valueOf(reserva.get("totalEntradas").toString());
+        Double totalProductos = Double.valueOf(reserva.get("totalProductos").toString());
+        Double totalGeneral = Double.valueOf(reserva.get("totalGeneral").toString());
+        Double iva = totalGeneral * 0.19;
+        Double totalConIva = totalGeneral + iva;
 
         Pagos pago = new Pagos();
-
         pago.setReservaId(request.getReservaId());
-        pago.setMonto(request.getMonto());
+        pago.setMonto(totalConIva);
         pago.setMetodoPago(request.getMetodoPago());
         pago.setEstado("PAGADO");
 
         Pagos guardado = pagosRepository.save(pago);
 
-        return PagosDTO.fromModel(guardado);
+        return BoletaDTO.builder()
+        .pagoId(guardado.getId())
+        .reservaId(request.getReservaId())
+        .peliculaTitulo(peliculaTitulo)
+        .funcionId(funcionId)
+        .cantidadEntradas(cantidadEntradas)
+        .totalEntradas(totalEntradas)
+        .totalProductos(totalProductos)
+        .subtotal(totalGeneral)
+        .iva(iva)
+        .totalConIva(totalConIva)
+        .metodoPago(request.getMetodoPago())
+        .estado("PAGADO")
+        .build();
     }
 
 
@@ -87,7 +111,7 @@ public class PagosService {
     private Map<String, Object> obtenerReserva(Long reservaId) {
         try {
             String url =
-                    "http://localhost:8085/api/reservas/" + reservaId;
+                    "http://reservas-service:8085/api/reservas/" + reservaId;
 
             return restTemplate.getForObject(url,Map.class);
 
