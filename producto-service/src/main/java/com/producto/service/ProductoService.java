@@ -25,12 +25,13 @@ public class ProductoService {
                 .collect(Collectors.toList());
     }
 
-      public List<ProductoDTO> getByName(String nombre) {
-        return productoRepository.findByNombre(nombre)
-                .stream()
-                .map(ProductoDTO::fromModel)
-                .collect(Collectors.toList());
-    }
+      public ProductoDTO getByNombre(String nombre) {
+            return productoRepository.findByNombre(nombre)
+            .stream()
+            .findFirst()
+            .map(ProductoDTO::fromModel)
+            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+}
 
     // Busca un producto por su ID
     public ProductoDTO getById(Long id) {
