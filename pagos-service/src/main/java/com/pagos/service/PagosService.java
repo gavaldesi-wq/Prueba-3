@@ -4,6 +4,7 @@ package com.pagos.service;
 import com.pagos.dto.BoletaDTO;
 import com.pagos.dto.CrearPagoRequestDTO;
 import com.pagos.dto.PagosDTO;
+import com.pagos.dto.ProductoBoletaDTO;
 import com.pagos.model.Pagos;
 import com.pagos.Repository.PagosRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -51,6 +53,28 @@ public class PagosService {
 
         Map<String, Object> reserva = obtenerReserva(request.getReservaId());
 
+        List<Map<String, Object>> productosMap = (List<Map<String, Object>>) reserva.get("productos");
+
+        List<ProductoBoletaDTO> productos = new ArrayList<>();
+
+        if (productosMap != null) {
+
+        for (Map<String, Object> p : productosMap) {
+
+        ProductoBoletaDTO producto = new ProductoBoletaDTO();
+        producto.setNombre((String) p.get("nombre"));
+        producto.setCantidad(
+                Integer.valueOf(p.get("cantidad").toString())
+        );
+        producto.setPrecioUnitario(
+                Double.valueOf(p.get("precioUnitario").toString())
+        );
+        producto.setSubtotal(
+                Double.valueOf(p.get("subtotal").toString())
+        );
+        productos.add(producto);
+    }
+}
         String peliculaTitulo = (String) reserva.get("peliculaTitulo");
         Long funcionId = Long.valueOf(reserva.get("funcionId").toString());
         Integer cantidadEntradas = Integer.valueOf(reserva.get("cantidadEntradas").toString());
@@ -76,6 +100,8 @@ public class PagosService {
         .cantidadEntradas(cantidadEntradas)
         .totalEntradas(totalEntradas)
         .totalProductos(totalProductos)
+        .totalGeneral(totalGeneral)
+        .productos(productos)
         .subtotal(totalGeneral)
         .iva(iva)
         .totalConIva(totalConIva)
