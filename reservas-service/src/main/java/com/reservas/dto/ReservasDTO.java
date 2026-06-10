@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import java.util.List;
-
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.ArrayList;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,6 +27,8 @@ public class ReservasDTO {
 
     private String peliculaTitulo;
 
+    private List<ProductoReservaDTO> productos;
+
     @NotNull(message = "La cantidad de entradas es obligatoria")
     @Min(value = 1, message = "La cantidad de entradas debe ser al menos 1")
     private Integer cantidadEntradas;
@@ -32,7 +36,6 @@ public class ReservasDTO {
     @NotNull(message = "El estado es obligatorio")
     private String estado;
 
-    private List<ProductoReservaDTO> productos;
 
     private Double totalProductos;
     private Double totalEntradas;
@@ -53,7 +56,24 @@ public class ReservasDTO {
 
     public static ReservasDTO fromModel(Reservas r) {
         if (r == null)
-            return null;
+        return null;
+
+    List<ProductoReservaDTO> productos = new ArrayList<>();
+
+    try {
+        if (r.getProductosJson() != null &&
+            !r.getProductosJson().isBlank()) {
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            productos = mapper.readValue(
+                    r.getProductosJson(),
+                    new TypeReference<List<ProductoReservaDTO>>() {}
+            );
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
 
         return ReservasDTO.builder()
                 .id(r.getId())
@@ -62,6 +82,7 @@ public class ReservasDTO {
                 .peliculaTitulo(r.getPeliculaTitulo())
                 .cantidadEntradas(r.getCantidadEntradas())
                 .estado(r.getEstado())
+                .productos(productos)
                 .totalProductos(r.getTotalProductos())
                 .totalEntradas(r.getTotalEntradas())
                 .totalGeneral(r.getTotalGeneral())

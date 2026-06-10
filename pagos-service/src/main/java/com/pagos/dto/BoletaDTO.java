@@ -3,6 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 @Data
@@ -15,7 +16,6 @@ public class BoletaDTO {
     private String peliculaTitulo;
     private Long funcionId;
     private Integer cantidadEntradas;
-    private List<ProductoBoletaDTO> productos;
     private Double totalEntradas;
     private Double totalProductos;
     private Double totalGeneral;
@@ -24,4 +24,7 @@ public class BoletaDTO {
     private Double subtotal;    
     private Double iva;         
     private Double totalConIva;
+
+    private List<ProductoBoletaDTO> productos;
+
 }
