@@ -1,5 +1,6 @@
 package com.producto.model;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "productos")
 public class Producto {
-        @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -26,6 +27,6 @@ public class Producto {
     @Column(nullable = false)
     private Double precio;
 
-
+    @Column(nullable = false, length = 50)
+    private String categoria;
 }
-
