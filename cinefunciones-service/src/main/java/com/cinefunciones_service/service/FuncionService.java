@@ -13,7 +13,9 @@ import com.cinefunciones_service.model.FuncionModel;
 import com.cinefunciones_service.repository.FuncionRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class FuncionService {
@@ -23,6 +25,7 @@ public class FuncionService {
 
     /* Este método devuelve una lista de todos los objetos FuncionDTO */
     public List<FuncionDTO> getAll() {
+        log.info("Obteniendo todas las funciones");
         return funcionRepository.findAll()
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -31,13 +34,19 @@ public class FuncionService {
 
     /* Este metodo devuelve un objeto FuncionDTO por su id */
     public FuncionDTO getById(Long id) {
+        log.info("Buscando función id={}", id);
         FuncionModel funcion = funcionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Función no encontrada"));
+                .orElseThrow(() -> {
+                    log.warn("Función no encontrada id={}", id);
+                    return new RuntimeException("Función no encontrada");
+                });
+        log.info("Función encontrada id={}", id);
         return FuncionDTO.fromModel(funcion);
     }
 
     /* Este método devuelve funciones filtradas por película */
     public List<FuncionDTO> getByPelicula(Long peliculaId) {
+        log.info("Obteniendo funciones por película id={}", peliculaId);
         return funcionRepository.findByPeliculaId(peliculaId)
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -46,6 +55,7 @@ public class FuncionService {
 
     /* Este método devuelve funciones filtradas por sala */
     public List<FuncionDTO> getBySala(Long salaId) {
+        log.info("Obteniendo funciones por sala id={}", salaId);
         return funcionRepository.findBySalaId(salaId)
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -54,6 +64,7 @@ public class FuncionService {
 
     /* Este método devuelve funciones filtradas por fecha */
     public List<FuncionDTO> getByFecha(String fecha) {
+        log.info("Obteniendo funciones por fecha={}", fecha);
         return funcionRepository.findByFecha(java.time.LocalDate.parse(fecha))
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -62,6 +73,7 @@ public class FuncionService {
 
     /* Este método devuelve funciones filtradas por estado */
     public List<FuncionDTO> getByEstado(String estado) {
+        log.info("Obteniendo funciones por estado={}", estado);
         return funcionRepository.findByEstado(estado.toUpperCase())
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -70,6 +82,7 @@ public class FuncionService {
 
     /* Este método devuelve solo funciones disponibles */
     public List<FuncionDTO> getDisponibles() {
+        log.info("Obteniendo funciones disponibles");
         return funcionRepository.findByEstadoNot("CANCELADA")
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -78,6 +91,7 @@ public class FuncionService {
 
     /* Este método devuelve funciones filtradas por formato */
     public List<FuncionDTO> getByFormato(String formato) {
+        log.info("Obteniendo funciones por formato={}", formato);
         return funcionRepository.findByFormato(formato.toUpperCase())
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -86,6 +100,7 @@ public class FuncionService {
 
     /* Este método devuelve funciones filtradas por idioma */
     public List<FuncionDTO> getByIdioma(String idioma) {
+        log.info("Obteniendo funciones por idioma={}", idioma);
         return funcionRepository.findByIdioma(idioma.toUpperCase())
                 .stream()
                 .map(FuncionDTO::fromModel)
@@ -94,6 +109,7 @@ public class FuncionService {
 
     /* Este método crea una nueva función, obteniendo nombres de película y sala */
     public FuncionDTO save(FuncionDTO dto) {
+        log.info("Creando función peliculaId={} salaId={}", dto.getPeliculaId(), dto.getSalaId());
         // Validar horarios
         validarHorariosValidos(dto);
         
@@ -108,13 +124,18 @@ public class FuncionService {
         
         FuncionModel funcion = dto.toModel();
         FuncionModel guardada = funcionRepository.save(funcion);
+        log.info("Función creada exitosamente id={}", guardada.getId());
         return FuncionDTO.fromModel(guardada);
     }
 
     /* Este método actualiza una función existente */
     public FuncionDTO update(Long id, FuncionDTO dto) {
+        log.info("Actualizando función id={}", id);
         FuncionModel f = funcionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Función no encontrada"));
+                .orElseThrow(() -> {
+                    log.warn("Función no encontrada id={}", id);
+                    return new RuntimeException("Función no encontrada");
+                });
         
         // Validar horarios
         validarHorariosValidos(dto);
@@ -141,17 +162,26 @@ public class FuncionService {
         f.setFormato(dto.getFormato().toUpperCase());
         
         FuncionModel actualizada = funcionRepository.save(f);
+        log.info("Función actualizada exitosamente id={}", id);
         return FuncionDTO.fromModel(actualizada);
     }
 
     /* Este método elimina una función por su id */
     public void delete(Long id) {
-        funcionRepository.deleteById(id);
+        log.info("Eliminando función id={}", id);
+        FuncionModel funcion = funcionRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.warn("Función no encontrada id={}", id);
+                    return new RuntimeException("Función no encontrada");
+                });
+        funcionRepository.delete(funcion);
+        log.info("Función eliminada exitosamente id={}", id);
     }
 
     /* Método privado para validar que los horarios son válidos */
     private void validarHorariosValidos(FuncionDTO dto) {
         if (dto.getHoraFin().isBefore(dto.getHoraInicio()) || dto.getHoraFin().equals(dto.getHoraInicio())) {
+            log.warn("Horario inválido para función peliculaId={} salaId={}", dto.getPeliculaId(), dto.getSalaId());
             throw new RuntimeException("La hora de fin debe ser posterior a la hora de inicio");
         }
     }
@@ -163,6 +193,7 @@ public class FuncionService {
             String url = "http://peliculas-service:8084/api/peliculas/" + peliculaId;
             return restTemplate.getForObject(url, Map.class);
         } catch (RestClientException e) {
+            log.warn("Película no encontrada id={}", peliculaId);
             throw new RuntimeException("La película con ID " + peliculaId + " no existe en el servicio de películas");
         }
     }
@@ -174,6 +205,7 @@ public class FuncionService {
             String url = "http://salas-service:8083/api/salas/" + salaId;
             return restTemplate.getForObject(url, Map.class);
         } catch (RestClientException e) {
+            log.warn("Sala no encontrada id={}", salaId);
             throw new RuntimeException("La sala con ID " + salaId + " no existe en el servicio de salas");
         }
     }

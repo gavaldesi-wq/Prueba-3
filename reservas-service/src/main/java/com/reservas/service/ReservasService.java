@@ -17,6 +17,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ReservasService {
@@ -26,6 +29,7 @@ public class ReservasService {
     private final ObjectMapper objectMapper;
 
     public List<ReservasDTO> getAll() {
+        log.info("Obteniendo todas las reservas");
         return reservasRepository.findAll()
                 .stream()
                 .map(ReservasDTO::fromModel)
@@ -33,12 +37,18 @@ public class ReservasService {
     }
 
     public ReservasDTO getById(Long id) {
+        log.info("Buscando reserva id={}", id);
         Reservas reserva = reservasRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Reserva no encontrada"));
+                .orElseThrow(() -> {
+                    log.warn("Reserva no encontrada id={}", id);
+                    return new RuntimeException("Reserva no encontrada");
+                });
+        log.info("Reserva encontrada id={}", id);
         return ReservasDTO.fromModel(reserva);
     }
 
     public List<ReservasDTO> getByUsuarioId(Long usuarioId) {
+        log.info("Obteniendo reservas por usuario id={}", usuarioId);
         return reservasRepository.findByUsuarioId(usuarioId)
                 .stream()
                 .map(ReservasDTO::fromModel)
@@ -46,12 +56,18 @@ public class ReservasService {
     }
 
     public void delete(Long id) {
+        log.info("Eliminando reserva id={}", id);
         Reservas reserva = reservasRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Reserva no encontrada"));
+                .orElseThrow(() -> {
+                    log.warn("Reserva no encontrada id={}", id);
+                    return new RuntimeException("Reserva no encontrada");
+                });
         reservasRepository.delete(reserva);
+        log.info("Reserva eliminada exitosamente id={}", id);
     }
 
     public ReservasDTO crearReserva(CrearReservaRequestDTO request) {
+        log.info("Creando reserva correo={} funcionId={}", request.getCorreo(), request.getFuncionId());
 
         // Validar usuario
         Map<String, Object> usuario = validarLoginUsuario(
@@ -91,6 +107,7 @@ public class ReservasService {
         try {
             productosJson = objectMapper.writeValueAsString(productosConPrecio);
         } catch (JsonProcessingException e) {
+            log.error("Error procesando productos para reserva correo={} funcionId={}", request.getCorreo(), request.getFuncionId(), e);
             throw new RuntimeException("Error procesando productos");
         }
 
@@ -107,6 +124,7 @@ public class ReservasService {
         reserva.setTotalGeneral(totalGeneral);
 
         Reservas guardada = reservasRepository.save(reserva);
+        log.info("Reserva creada exitosamente id={}", guardada.getId());
         return ReservasDTO.fromModel(guardada);
     }
 
@@ -116,6 +134,7 @@ public class ReservasService {
             Map<String, String> body = Map.of("correo", correo, "password", password);
             return restTemplate.postForObject(url, body, Map.class);
         } catch (RestClientException e) {
+            log.warn("Login inválido para correo={}", correo);
             throw new RuntimeException("Correo o contraseña incorrectos");
         }
     }
@@ -125,6 +144,7 @@ public class ReservasService {
             String url = "http://cinefunciones-service:8082/api/funciones/" + funcionId;
             return restTemplate.getForObject(url, Map.class);
         } catch (RestClientException e) {
+            log.warn("Función no encontrada id={}", funcionId);
             throw new RuntimeException("La función con ID " + funcionId + " no existe");
         }
     }
@@ -134,6 +154,7 @@ public class ReservasService {
             String url = "http://producto-service:8087/api/productos/nombre/" + nombre;
             return restTemplate.getForObject(url, Map.class);
         } catch (RestClientException e) {
+            log.warn("Producto no encontrado nombre={}", nombre);
             throw new RuntimeException("El producto '" + nombre + "' no existe");
         }
     }

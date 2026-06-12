@@ -8,39 +8,46 @@
 
     <changeSet id="2" author="gabriel">
 
-        <insert tableName="productos">
+                <insert tableName="productos">
             <column name="nombre" value="Cabritas pequeñas"/>
             <column name="precio" value="2500"/>
+            <column name="categoria" value="PALOMITAS"/>
         </insert>
 
         <insert tableName="productos">
             <column name="nombre" value="Cabritas grandes"/>
             <column name="precio" value="3500"/>
+            <column name="categoria" value="PALOMITAS"/>
         </insert>
 
         <insert tableName="productos">
             <column name="nombre" value="Bebida pequeña"/>
             <column name="precio" value="1500"/>
+            <column name="categoria" value="BEBIDAS"/>
         </insert>
 
         <insert tableName="productos">
             <column name="nombre" value="Bebida grande"/>
             <column name="precio" value="2000"/>
+            <column name="categoria" value="BEBIDAS"/>
         </insert>
 
         <insert tableName="productos">
             <column name="nombre" value="Combo cabritas + bebida"/>
             <column name="precio" value="4500"/>
+            <column name="categoria" value="COMBOS"/>
         </insert>
 
         <insert tableName="productos">
             <column name="nombre" value="Hot dog"/>
             <column name="precio" value="3000"/>
+            <column name="categoria" value="OTRO"/>
         </insert>
 
         <insert tableName="productos">
             <column name="nombre" value="Nachos"/>
             <column name="precio" value="3200"/>
+            <column name="categoria" value="NACHOS"/>
         </insert>
 
     </changeSet>

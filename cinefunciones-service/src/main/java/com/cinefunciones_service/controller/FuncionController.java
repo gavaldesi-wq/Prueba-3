@@ -31,110 +31,65 @@ public class FuncionController {
     @GetMapping
     public ResponseEntity<?> getAll() {
         logger.info("GET /api/funciones");
-        try {
-            ResponseEntity<?> response = ResponseEntity.ok(funcionService.getAll());
-            logger.debug("Funciónes obtenidas");
-            return response;
-        } catch (RuntimeException ex) {
-            logger.warn("Error obteniendo funciones - {}", ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        ResponseEntity<?> response = ResponseEntity.ok(funcionService.getAll());
+        logger.debug("Funciónes obtenidas");
+        return response;
     }
 
     /* Para buscar función por id */
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {
         logger.info("GET /api/funciones/{}", id);
-        try {
-            return ResponseEntity.ok(funcionService.getById(id));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando función id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getById(id));
     }
 
     /* Para buscar funciones por película */
     @GetMapping("/pelicula/{peliculaId}")
     public ResponseEntity<?> getByPelicula(@PathVariable Long peliculaId) {
         logger.info("GET /api/funciones/pelicula/{}", peliculaId);
-        try {
-            return ResponseEntity.ok(funcionService.getByPelicula(peliculaId));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones por película id={} - {}", peliculaId, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getByPelicula(peliculaId));
     }
 
     /* Para buscar funciones por sala */
     @GetMapping("/sala/{salaId}")
     public ResponseEntity<?> getBySala(@PathVariable Long salaId) {
         logger.info("GET /api/funciones/sala/{}", salaId);
-        try {
-            return ResponseEntity.ok(funcionService.getBySala(salaId));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones por sala id={} - {}", salaId, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getBySala(salaId));
     }
 
     /* Para buscar funciones por fecha */
     @GetMapping("/fecha/{fecha}")
     public ResponseEntity<?> getByFecha(@PathVariable String fecha) {
         logger.info("GET /api/funciones/fecha/{}", fecha);
-        try {
-            return ResponseEntity.ok(funcionService.getByFecha(fecha));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones por fecha={} - {}", fecha, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getByFecha(fecha));
     }
 
     /* Para buscar funciones por estado */
     @GetMapping("/estado/{estado}")
     public ResponseEntity<?> getByEstado(@PathVariable String estado) {
         logger.info("GET /api/funciones/estado/{}", estado);
-        try {
-            return ResponseEntity.ok(funcionService.getByEstado(estado));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones por estado={} - {}", estado, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getByEstado(estado));
     }
 
     /* Para mostrar solo funciones disponibles */
     @GetMapping("/disponibles")
     public ResponseEntity<?> getDisponibles() {
         logger.info("GET /api/funciones/disponibles");
-        try {
-            return ResponseEntity.ok(funcionService.getDisponibles());
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones disponibles - {}", ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getDisponibles());
     }
 
     /* Para buscar funciones por formato */
     @GetMapping("/formato/{formato}")
     public ResponseEntity<?> getByFormato(@PathVariable String formato) {
         logger.info("GET /api/funciones/formato/{}", formato);
-        try {
-            return ResponseEntity.ok(funcionService.getByFormato(formato));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones por formato={} - {}", formato, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getByFormato(formato));
     }
 
     /* Para buscar funciones por idioma */
     @GetMapping("/idioma/{idioma}")
     public ResponseEntity<?> getByIdioma(@PathVariable String idioma) {
         logger.info("GET /api/funciones/idioma/{}", idioma);
-        try {
-            return ResponseEntity.ok(funcionService.getByIdioma(idioma));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando funciones por idioma={} - {}", idioma, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(funcionService.getByIdioma(idioma));
     }
 
     /* Para guardar una función */
@@ -150,14 +105,9 @@ public class FuncionController {
             return ResponseEntity.badRequest().body(errores);
         }
 
-        try {
-            FuncionDTO guardada = funcionService.save(dto);
-            logger.info("Función creada exitosamente id={}", guardada.getId());
-            return ResponseEntity.ok(guardada);
-        } catch (RuntimeException ex) {
-            logger.warn("Error creando función peliculaId={} salaId={} - {}", dto.getPeliculaId(), dto.getSalaId(), ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        FuncionDTO guardada = funcionService.save(dto);
+        logger.info("Función creada exitosamente id={}", guardada.getId());
+        return ResponseEntity.ok(guardada);
     }
 
     /* Para actualizar una función */
@@ -173,25 +123,15 @@ public class FuncionController {
             return ResponseEntity.badRequest().body(errores);
         }
 
-        try {
-            return ResponseEntity.ok(funcionService.update(id, dto));
-        } catch (RuntimeException ex) {
-            logger.warn("Error actualizando función id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(funcionService.update(id, dto));
     }
 
     /* Para eliminar una función */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         logger.info("DELETE /api/funciones/{}", id);
-        try {
-            funcionService.delete(id);
-            logger.info("Función eliminada exitosamente id={}", id);
-            return ResponseEntity.ok(Map.of("mensaje", "Función eliminada correctamente"));
-        } catch (RuntimeException ex) {
-            logger.warn("Error eliminando función id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        funcionService.delete(id);
+        logger.info("Función eliminada exitosamente id={}", id);
+        return ResponseEntity.ok(Map.of("mensaje", "Función eliminada correctamente"));
     }
 }
