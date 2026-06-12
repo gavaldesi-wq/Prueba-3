@@ -35,26 +35,16 @@ public class SalaController {
     @GetMapping
     public ResponseEntity<?> getAll(){
         logger.info("GET /api/salas");
-        try {
-            List<SalaDTO> salas = salaService.getAll();
-            logger.debug("Cantidad de salas obtenidas: {}", salas.size());
-            return ResponseEntity.ok(salas);
-        } catch (RuntimeException ex) {
-            logger.warn("Error obteniendo salas - {}", ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        List<SalaDTO> salas = salaService.getAll();
+        logger.debug("Cantidad de salas obtenidas: {}", salas.size());
+        return ResponseEntity.ok(salas);
     }
 
     /*Para buscar sala por id */
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {
         logger.info("GET /api/salas/{}", id);
-        try {
-            return ResponseEntity.ok(salaService.getById(id));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando sala id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(salaService.getById(id));
     }
 
     /*Para guardar una sala */
@@ -70,14 +60,9 @@ public class SalaController {
             return ResponseEntity.badRequest().body(errors);
         }
 
-        try {
-            SalaDTO guardada = salaService.save(dto);
-            logger.info("Sala creada exitosamente id={}", guardada.getId());
-            return ResponseEntity.ok(guardada);
-        } catch (RuntimeException ex) {
-            logger.warn("Error creando sala nombre={} - {}", dto.getNombre(), ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        SalaDTO guardada = salaService.save(dto);
+        logger.info("Sala creada exitosamente id={}", guardada.getId());
+        return ResponseEntity.ok(guardada);
     }
 
     /*Para actualizar una sala */
@@ -93,28 +78,18 @@ public class SalaController {
             return ResponseEntity.badRequest().body(errors);
         }
 
-        try {
-            SalaDTO actualizado = salaService.update(id, dto);
-            logger.info("Sala actualizada exitosamente id={}", id);
-            return ResponseEntity.ok(actualizado);
-        } catch (RuntimeException ex) {
-            logger.warn("Error actualizando sala id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        SalaDTO actualizado = salaService.update(id, dto);
+        logger.info("Sala actualizada exitosamente id={}", id);
+        return ResponseEntity.ok(actualizado);
     }
 
     /*Para eliminar una sala */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         logger.info("DELETE /api/salas/{}", id);
-        try {
-            salaService.delete(id);
-            logger.info("Sala eliminada exitosamente id={}", id);
-            return ResponseEntity.ok(Map.of("mensaje", "Sala eliminada correctamente"));
-        } catch (RuntimeException ex) {
-            logger.warn("Error eliminando sala id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        salaService.delete(id);
+        logger.info("Sala eliminada exitosamente id={}", id);
+        return ResponseEntity.ok(Map.of("mensaje", "Sala eliminada correctamente"));
     }
 
 }

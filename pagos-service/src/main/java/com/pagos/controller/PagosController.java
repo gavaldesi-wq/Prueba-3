@@ -26,45 +26,25 @@ public class PagosController {
     @GetMapping
     public ResponseEntity<?> getAll() {
         log.info("GET /api/pagos");
-        try {
-            return ResponseEntity.ok(
-                    pagosService.getAll()
-            );
-        } catch (RuntimeException ex) {
-            log.warn("Error obteniendo pagos - {}", ex.getMessage());
-            return ResponseEntity.badRequest()
-                    .body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(
+                pagosService.getAll()
+        );
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {
         log.info("GET /api/pagos/{}", id);
-        try {
-            return ResponseEntity.ok(
-                    pagosService.getById(id)
-            );
-        } catch (RuntimeException ex) {
-            log.warn("Error buscando pago id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest()
-                    .body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(
+                pagosService.getById(id)
+        );
     }
 
     @GetMapping("/reserva/{reservaId}")
     public ResponseEntity<?> getByReservaId(@PathVariable Long reservaId) {
         log.info("GET /api/pagos/reserva/{}", reservaId);
-        try {
-            return ResponseEntity.ok(
-                    pagosService.getByReservaId(reservaId)
-            );
-        } catch (RuntimeException ex) {
-            log.warn("Error buscando pagos de reserva={} - {}",
-                    reservaId,
-                    ex.getMessage());
-            return ResponseEntity.badRequest()
-                    .body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(
+            pagosService.getByReservaId(reservaId)
+        );
     }
 
     @PostMapping("/pagar")
@@ -82,15 +62,9 @@ public class PagosController {
             log.warn("Errores de validación al crear pago - {}", errors);
             return ResponseEntity.badRequest().body(errors);
         }
-        try {
-            BoletaDTO boleta = pagosService.pagarReserva(request);
-             log.info("Pago creado exitosamente id={}", boleta.getPagoId());
+        BoletaDTO boleta = pagosService.pagarReserva(request);
+        log.info("Pago creado exitosamente id={}", boleta.getPagoId());
         return ResponseEntity.ok(boleta);
-        } catch (RuntimeException ex) {
-            log.warn("Error procesando pago - {}", ex.getMessage());
-            return ResponseEntity.badRequest()
-                    .body(Map.of("error", ex.getMessage()));
-        }
     }
     @PutMapping("/{id}")
     public ResponseEntity<?> update(
@@ -105,38 +79,19 @@ public class PagosController {
                     .collect(Collectors.toList());
             return ResponseEntity.badRequest().body(errors);
         }
-        try {
-            return ResponseEntity.ok(
-                    pagosService.update(id, dto)
-            );
-
-        } catch (RuntimeException ex) {
-
-            log.warn("Error actualizando pago id={} - {}",
-                    id,
-                    ex.getMessage());
-
-            return ResponseEntity.badRequest()
-                    .body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(
+            pagosService.update(id, dto)
+        );
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
 
         log.info("DELETE /api/pagos/{}", id);
-        try {
-            pagosService.delete(id);
-            log.info("Pago eliminado exitosamente id={}", id);
-            return ResponseEntity.ok(
-                    Map.of("mensaje", "Pago eliminado")
-            );
-        } catch (RuntimeException ex) {
-            log.warn("Error eliminando pago id={} - {}",
-                    id,
-                    ex.getMessage());
-            return ResponseEntity.badRequest()
-                    .body(Map.of("error", ex.getMessage()));
-        }
+        pagosService.delete(id);
+        log.info("Pago eliminado exitosamente id={}", id);
+        return ResponseEntity.ok(
+            Map.of("mensaje", "Pago eliminado")
+        );
     }
 }

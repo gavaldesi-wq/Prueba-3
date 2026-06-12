@@ -26,6 +26,7 @@ public class UsuarioService {
 
 
     public List<UsuarioDTO> getAll(){
+        log.info("Obteniendo todos los usuarios");
         return usuarioRepository.findAll() // Aca se traen todos los usuarios de la base de datos
                 .stream() // Se convierte la lista en stream para poder transformarla
                 .map(UsuarioDTO::fromModel) // Aca se convierte cada entidad usuario en un DTO
@@ -35,19 +36,23 @@ public class UsuarioService {
 
     
     public UsuarioDTO getById(Long id) {
-
-        
-
+        log.info("Buscando usuario id={}", id);
         Usuarios u = usuarioRepository.findById(id) // Aca lo que hacemos es buscar el usuario por la id
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado")); 
+                .orElseThrow(() -> {
+                    log.warn("Usuario no encontrado id={}", id);
+                    return new RuntimeException("Usuario no encontrado");
+                }); 
                 // Si el usuario no existe, sale un error el cual seria el mensaje de Usuario no encontrado
  
+        log.info("Usuario encontrado id={}", id);
         return UsuarioDTO.fromModel(u); // luego aqui todo se convierte a dto pa devolverlo en el get
     }
 
 
         // ESTE ES PARA EL POST OSEA CREAR EL USUARIO
     public UsuarioDTO save(UsuarioDTO dto) {
+
+        log.info("Creando usuario correo={}", dto.getCorreo());
 
         Usuarios usuario = dto.toModel(); 
         // Convierte el dto a una entidad pa guardarlo
@@ -57,7 +62,10 @@ public class UsuarioService {
         usuario.setPassword(passwordEncriptada);
 
         /*Aca buscamos el rol en la base de datos */
-        Rol rol = rolRepository.findById(dto.getRolId()).orElseThrow(()-> new RuntimeException("Rol no encontrado"));
+        Rol rol = rolRepository.findById(dto.getRolId()).orElseThrow(()-> {
+            log.warn("Rol no encontrado id={}", dto.getRolId());
+            return new RuntimeException("Rol no encontrado");
+        });
 
         /*Aca le asignamos el rol al usuario */
         usuario.setRol(rol);
@@ -65,6 +73,7 @@ public class UsuarioService {
         Usuarios guardado = usuarioRepository.save(usuario); 
         // Guarda en la base de datos
 
+        log.info("Usuario creado exitosamente id={}", guardado.getId());
         return UsuarioDTO.fromModel(guardado); 
         // Convierte lo guardado a DTO y lo devuelve
     }
@@ -73,9 +82,12 @@ public class UsuarioService {
     //AHORA EL PUT PA ACTUALIZAR EL USUARIO
 
     public UsuarioDTO update(Long id, UsuarioDTO dto){
-        
+        log.info("Actualizando usuario id={}", id);
         Usuarios u = usuarioRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("Usuario no encontrado")); /*Aca tamos buscando el usuario para ver si existe, si no, sale el mensaje */
+                .orElseThrow(()-> {
+                    log.warn("Usuario no encontrado id={}", id);
+                    return new RuntimeException("Usuario no encontrado");
+                }); /*Aca tamos buscando el usuario para ver si existe, si no, sale el mensaje */
 
         u.setNombre(dto.getNombre()); 
         u.setCorreo(dto.getCorreo());
@@ -92,13 +104,17 @@ public class UsuarioService {
         // esto es pa actualizar solo el rol si viene el rol id
         if (dto.getRolId() != null) {
             Rol rol = rolRepository.findById(dto.getRolId())
-                    .orElseThrow(() -> new RuntimeException("Rol no encontrado"));
+                    .orElseThrow(() -> {
+                        log.warn("Rol no encontrado id={}", dto.getRolId());
+                        return new RuntimeException("Rol no encontrado");
+                    });
 
             u.setRol(rol);
         }
 
         Usuarios actualizado = usuarioRepository.save(u);
 
+        log.info("Usuario actualizado exitosamente id={}", id);
         return UsuarioDTO.fromModel(actualizado);
         // Se guarda todo y devuelve los cambios actualizados 
     
@@ -107,15 +123,25 @@ public class UsuarioService {
 
     // EL MAS FACIL DE TODOS, EL DELETE
     public void delete(Long id) {
-        usuarioRepository.deleteById(id); 
-        // elimina el usuario por el id
+        log.info("Eliminando usuario id={}", id);
+        Usuarios usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.warn("Usuario no encontrado id={}", id);
+                    return new RuntimeException("Usuario no encontrado");
+                });
+        usuarioRepository.delete(usuario);
+        log.info("Usuario eliminado exitosamente id={}", id);
     }
 
     /*METODO PARA EL LOGIN PIPIPI */
 
     public UsuarioDTO login(String correo, String password){
+        log.info("Intentando login correo={}", correo);
         /*Aca lo que se hace es preguntar al repository si encontro el correo, si lo encuentra guarda el usuario en "usuario", si no lo encuentra mostrara un mensaje de que no lo encontro po */
-        Usuarios usuario = usuarioRepository.findByCorreo(correo).orElseThrow(()-> new RuntimeException("No se ha encontrado el usuario por el correo"));
+        Usuarios usuario = usuarioRepository.findByCorreo(correo).orElseThrow(()-> {
+            log.warn("Usuario no encontrado por correo={}", correo);
+            return new RuntimeException("No se ha encontrado el usuario por el correo");
+        });
 
         /*Aca compara la contraseña guardada con la contraseña ingresada y si no son iguales, mostrara que esta incorrecta */
         if (!passwordEncoder.matches(password, usuario.getPassword())) {

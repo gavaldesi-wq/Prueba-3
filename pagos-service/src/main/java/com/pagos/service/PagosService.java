@@ -17,6 +17,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class PagosService {
@@ -26,6 +29,7 @@ public class PagosService {
     
 
     public List<PagosDTO> getAll() {
+        log.info("Obteniendo todos los pagos");
 
         return pagosRepository.findAll()
                 .stream()
@@ -33,14 +37,20 @@ public class PagosService {
                 .collect(Collectors.toList());
     }
     public PagosDTO getById(Long id) {
+        log.info("Buscando pago id={}", id);
 
         Pagos pago = pagosRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Pago no encontrado"));
+                .orElseThrow(() -> {
+                    log.warn("Pago no encontrado id={}", id);
+                    return new RuntimeException("Pago no encontrado");
+                });
 
+        log.info("Pago encontrado id={}", id);
         return PagosDTO.fromModel(pago);
     }
 
     public List<PagosDTO> getByReservaId(Long reservaId) {
+        log.info("Obteniendo pagos por reserva id={}", reservaId);
 
         return pagosRepository.findByReservaId(reservaId)
                 .stream()
@@ -50,6 +60,7 @@ public class PagosService {
 
 
     public BoletaDTO pagarReserva(CrearPagoRequestDTO request) {
+        log.info("Procesando pago para reservaId={}", request.getReservaId());
 
         Map<String, Object> reserva = obtenerReserva(request.getReservaId());
 
@@ -92,6 +103,8 @@ public class PagosService {
 
         Pagos guardado = pagosRepository.save(pago);
 
+        log.info("Pago creado exitosamente id={}", guardado.getId());
+
         return BoletaDTO.builder()
         .pagoId(guardado.getId())
         .reservaId(request.getReservaId())
@@ -112,9 +125,13 @@ public class PagosService {
 
 
     public PagosDTO update(Long id, PagosDTO dto) {
+        log.info("Actualizando pago id={}", id);
 
         Pagos pago = pagosRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Pago no encontrado"));
+                .orElseThrow(() -> {
+                    log.warn("Pago no encontrado id={}", id);
+                    return new RuntimeException("Pago no encontrado");
+                });
 
         pago.setReservaId(dto.getReservaId());
         pago.setMonto(dto.getMonto());
@@ -123,14 +140,20 @@ public class PagosService {
 
         Pagos actualizado = pagosRepository.save(pago);
 
+        log.info("Pago actualizado exitosamente id={}", id);
         return PagosDTO.fromModel(actualizado);
     }
 
   
     public void delete(Long id) {
+        log.info("Eliminando pago id={}", id);
         Pagos pago = pagosRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Pago no encontrado"));
+                .orElseThrow(() -> {
+                    log.warn("Pago no encontrado id={}", id);
+                    return new RuntimeException("Pago no encontrado");
+                });
         pagosRepository.delete(pago);
+        log.info("Pago eliminado exitosamente id={}", id);
     }
 
     
@@ -142,6 +165,7 @@ public class PagosService {
             return restTemplate.getForObject(url,Map.class);
 
         } catch (RestClientException e) {
+            log.warn("Reserva no encontrada id={}", reservaId);
             throw new RuntimeException(
                     "La reserva con ID "
                             + reservaId

@@ -50,16 +50,9 @@ public class UsuarioController {
     /*Pa buscar por id */
     @GetMapping("/{id}")    
     public ResponseEntity<?> getById(@PathVariable Long id) {
-            logger.info("GET /api/usuarios/{}", id);
-    try {
-        UsuarioDTO usuario = usuarioService.getById(id);
-        logger.info("Usuario encontrado id={}", id);
-        return ResponseEntity.ok(usuario);
-    } catch (RuntimeException ex) {
-        logger.warn("Error buscando usuario id={} - {}", id, ex.getMessage());
-        return ResponseEntity.badRequest().body(ex.getMessage());
+        logger.info("GET /api/usuarios/{}", id);
+        return ResponseEntity.ok(usuarioService.getById(id));
     }
-}
 
 
 
@@ -81,65 +74,39 @@ public class UsuarioController {
         o en el correo, se devolvera los 2 mensajes de errores */
     }
 
-        try {
-            // El Service lanzará la excepción si el nombre está vacío
-            UsuarioDTO guardado = usuarioService.save(dto);
-            logger.info("Usuario creado exitosamente id={}", guardado.getId());
-            return ResponseEntity.ok(guardado);
-        } catch (RuntimeException ex) {
-            // Esto envía "El nombre es obligatorio" a Postman
-            logger.warn("Error al crear usuario correo={} - {}",
-                dto.getCorreo(),
-                ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        UsuarioDTO guardado = usuarioService.save(dto);
+        logger.info("Usuario creado exitosamente id={}", guardado.getId());
+        return ResponseEntity.ok(guardado);
     }
     
     /*Pa actualizar los usuarios */
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@PathVariable Long id, @RequestBody UsuarioDTO dto) {
          logger.info("PUT /api/usuarios/{} - correo={}", id, dto.getCorreo());
-        try {
-            /*el actualizado es una copia del actualizado original  */
-            UsuarioDTO actualizado = usuarioService.update(id, dto);
-            logger.info("Usuario actualizado exitosamente id={}", id);
-            return ResponseEntity.ok(actualizado);
-            
-        } catch (RuntimeException ex) {
-            logger.warn("Error actualizando usuario id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        UsuarioDTO actualizado = usuarioService.update(id, dto);
+        logger.info("Usuario actualizado exitosamente id={}", id);
+        return ResponseEntity.ok(actualizado);
     }
     
     /* Pa eliminar*/
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         logger.info("DELETE /api/usuarios/{}", id);
-        try {
-            usuarioService.delete(id);
-            logger.info("Usuario eliminado exitosamente id={}", id);
-            return ResponseEntity.ok(Map.of("mensaje", "Usuario eliminado correctamente"));
-        } catch (RuntimeException ex) {
-             logger.warn("Error eliminando usuario id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        usuarioService.delete(id);
+        logger.info("Usuario eliminado exitosamente id={}", id);
+        return ResponseEntity.ok(Map.of("mensaje", "Usuario eliminado correctamente"));
     }
 
     /*El loginn */
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         logger.info("POST /api/usuarios/login - correo={}", request.getCorreo());
-        try {
-             Object respuesta = usuarioService.login(
-                request.getCorreo(),
-                request.getPassword());
+        Object respuesta = usuarioService.login(
+            request.getCorreo(),
+            request.getPassword());
 
-            logger.info("Login exitoso correo={}", request.getCorreo());
-            return ResponseEntity.ok(respuesta);
-        } catch (RuntimeException ex) {
-            logger.warn("Error en login correo={} - {}", request.getCorreo(), ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        logger.info("Login exitoso correo={}", request.getCorreo());
+        return ResponseEntity.ok(respuesta);
     }
 
 }

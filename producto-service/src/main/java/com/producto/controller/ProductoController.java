@@ -34,34 +34,21 @@ public class ProductoController {
     @GetMapping
     public ResponseEntity<?> getAll() {
         logger.info("GET /api/productos");
-        try {
-            List<ProductoDTO> productos = productoService.getAll();
-            logger.debug("Cantidad de productos obtenidos: {}", productos.size());
-            return ResponseEntity.ok(productos);
-        } catch (RuntimeException ex) {
-            logger.warn("Error obteniendo productos - {}", ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        List<ProductoDTO> productos = productoService.getAll();
+        logger.debug("Cantidad de productos obtenidos: {}", productos.size());
+        return ResponseEntity.ok(productos);
     }
 
     @GetMapping("/nombre/{nombre}")
     public ResponseEntity<?> getByNombre(@PathVariable String nombre) {
-        try {
-            return ResponseEntity.ok(productoService.getByNombre(nombre));
-        } catch (RuntimeException ex) {
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
-}
+        logger.info("GET /api/productos/nombre/{}", nombre);
+        return ResponseEntity.ok(productoService.getByNombre(nombre));
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {
         logger.info("GET /api/productos/{}", id);
-        try {
-            return ResponseEntity.ok(productoService.getById(id));
-        } catch (RuntimeException ex) {
-            logger.warn("Error buscando producto id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        return ResponseEntity.ok(productoService.getById(id));
     }
 
     @PostMapping
@@ -75,14 +62,9 @@ public class ProductoController {
             logger.warn("Errores de validación: {}", errors);
             return ResponseEntity.badRequest().body(errors);
         }
-        try {
-            ProductoDTO guardado = productoService.save(dto);
-            logger.info("Producto creado exitosamente id={}", guardado.getId());
-            return ResponseEntity.ok(guardado);
-        } catch (RuntimeException ex) {
-            logger.warn("Error creando producto nombre={} - {}", dto.getNombre(), ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        ProductoDTO guardado = productoService.save(dto);
+        logger.info("Producto creado exitosamente id={}", guardado.getId());
+        return ResponseEntity.ok(guardado);
     }
 
     @PutMapping("/{id}")
@@ -96,26 +78,16 @@ public class ProductoController {
             logger.warn("Errores de validación: {}", errors);
             return ResponseEntity.badRequest().body(errors);
         }
-        try {
-            ProductoDTO actualizado = productoService.update(id, dto);
-            logger.info("Producto actualizado exitosamente id={}", id);
-            return ResponseEntity.ok(actualizado);
-        } catch (RuntimeException ex) {
-            logger.warn("Error actualizando producto id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        ProductoDTO actualizado = productoService.update(id, dto);
+        logger.info("Producto actualizado exitosamente id={}", id);
+        return ResponseEntity.ok(actualizado);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         logger.info("DELETE /api/productos/{}", id);
-        try {
-            productoService.delete(id);
-            logger.info("Producto eliminado exitosamente id={}", id);
-            return ResponseEntity.ok(Map.of("mensaje", "Producto eliminado correctamente"));
-        } catch (RuntimeException ex) {
-            logger.warn("Error eliminando producto id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
+        productoService.delete(id);
+        logger.info("Producto eliminado exitosamente id={}", id);
+        return ResponseEntity.ok(Map.of("mensaje", "Producto eliminado correctamente"));
     }
 }

@@ -25,37 +25,19 @@ public class ReservasController {
      @GetMapping
     public ResponseEntity<?> getAll() {
         log.info("GET /api/reservas");
-
-        try {
-            return ResponseEntity.ok(reservasService.getAll());
-        } catch (RuntimeException ex) {
-            log.warn("Error obteniendo reservas - {}", ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(reservasService.getAll());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {
         log.info("GET /api/reservas/{}", id);
-
-        try {
-            return ResponseEntity.ok(reservasService.getById(id));
-        } catch (RuntimeException ex) {
-            log.warn("Error buscando reserva id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(reservasService.getById(id));
     }
 
     @GetMapping("/usuario/{usuarioId}")
     public ResponseEntity<?> getByUsuarioId(@PathVariable Long usuarioId) {
         log.info("GET /api/reservas/usuario/{}", usuarioId);
-
-        try {
-            return ResponseEntity.ok(reservasService.getByUsuarioId(usuarioId));
-        } catch (RuntimeException ex) {
-            log.warn("Error buscando reservas del usuario id={} - {}", usuarioId, ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        return ResponseEntity.ok(reservasService.getByUsuarioId(usuarioId));
     }
 
     @PostMapping("/reservar")
@@ -78,37 +60,16 @@ public class ReservasController {
             return ResponseEntity.badRequest().body(errors);
         }
 
-        try {
-
-            ReservasDTO reserva = reservasService.crearReserva(request);
-
-            log.info("Reserva creada exitosamente id={}",
-                reserva.getId());
-
-            return ResponseEntity.ok(reserva);
-
-        } catch (RuntimeException ex) {
-            log.warn("Error creando reserva para correo={} - {}",
-                    request.getCorreo(),
-                    ex.getMessage());
-
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        ReservasDTO reserva = reservasService.crearReserva(request);
+        log.info("Reserva creada exitosamente id={}", reserva.getId());
+        return ResponseEntity.ok(reserva);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         log.info("DELETE /api/reservas/{}", id);
-
-        try {
-            reservasService.delete(id);
-
-            log.info("Reserva eliminada exitosamente id={}", id);
-
-            return ResponseEntity.ok(Map.of("mensaje", "Reserva eliminada"));
-        } catch (RuntimeException ex) {
-            log.warn("Error eliminando reserva id={} - {}", id, ex.getMessage());
-            return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
-        }
+        reservasService.delete(id);
+        log.info("Reserva eliminada exitosamente id={}", id);
+        return ResponseEntity.ok(Map.of("mensaje", "Reserva eliminada"));
     }
 }
