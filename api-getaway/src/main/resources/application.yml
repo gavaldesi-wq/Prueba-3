@@ -41,3 +41,8 @@ spring:
           uri: http://producto-service:8087
           predicates:
             - Path=/api/productos/**
+            
+        - id: promociones-service
+          uri: http://promociones-service:8088
+          predicates:
+            - Path=/api/combos/**
