@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="2" author="promociones">
+
+        <insert tableName="combos">
+            <column name="nombre" value="Combo Familiar"/>
+            <column name="descripcion" value="2 cabritas grandes + 2 bebidas grandes"/>
+            <column name="precio_combo" value="11000"/>
+            <column name="productos_json" value='[{"nombre":"Cabritas grandes","cantidad":2},{"nombre":"Bebida grande","cantidad":2}]'/>
+            <column name="activo" valueBoolean="true"/>
+        </insert>
+
+        <insert tableName="combos">
+            <column name="nombre" value="Combo Pareja"/>
+            <column name="descripcion" value="2 cabritas pequeñas + 2 bebidas pequeñas"/>
+            <column name="precio_combo" value="7000"/>
+            <column name="productos_json" value='[{"nombre":"Cabritas pequeñas","cantidad":2},{"nombre":"Bebida pequeña","cantidad":2}]'/>
+            <column name="activo" valueBoolean="true"/>
+        </insert>
+
+        <insert tableName="combos">
+            <column name="nombre" value="Combo Nachos Supremo"/>
+            <column name="descripcion" value="Nachos + bebida grande + hot dog"/>
+            <column name="precio_combo" value="7500"/>
+            <column name="productos_json" value='[{"nombre":"Nachos","cantidad":1},{"nombre":"Bebida grande","cantidad":1},{"nombre":"Hot dog","cantidad":1}]'/>
+            <column name="activo" valueBoolean="true"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

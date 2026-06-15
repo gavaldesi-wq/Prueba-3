@@ -68,14 +68,10 @@ public class ReservasService {
 
     public ReservasDTO crearReserva(CrearReservaRequestDTO request) {
         log.info("Creando reserva correo={} funcionId={}", request.getCorreo(), request.getFuncionId());
-
-        // Validar usuario
         Map<String, Object> usuario = validarLoginUsuario(
                 request.getCorreo(),
                 request.getPassword()
         );
-
-        // Obtener función y película
         Map<String, Object> funcion = obtenerFuncion(request.getFuncionId());
         String peliculaTitulo = (String) funcion.get("peliculaTitulo");
         Double precioGeneral = Double.valueOf(funcion.get("precioGeneral").toString());
@@ -88,21 +84,31 @@ public class ReservasService {
         Double totalProductos = 0.0;
 
         if (request.getProductos() != null && !request.getProductos().isEmpty()) {
-            for (ProductoReservaDTO item : request.getProductos()) {
-                Map<String, Object> producto = buscarProductoPorNombre(item.getNombre());
-                Double precioUnitario = Double.valueOf(producto.get("precio").toString());
-                Double subtotal = precioUnitario * item.getCantidad();
+        for (ProductoReservaDTO item : request.getProductos()) {
 
-                item.setPrecioUnitario(precioUnitario);
-                item.setSubtotal(subtotal);
-                productosConPrecio.add(item);
-                totalProductos += subtotal;
-            }
+        Double precioUnitario;
+
+        if (item.getNombre().toLowerCase().startsWith("combo")) {
+            Map<String, Object> combo = obtenerCombo(item.getNombre());
+            precioUnitario = Double.valueOf(combo.get("precioCombo").toString());
+            item.setEsCombo(true);
+            item.setComboId(Long.valueOf(combo.get("id").toString()));
+            log.info("Combo aplicado: nombre={} precio={}", item.getNombre(), precioUnitario);
+        } else {
+            Map<String, Object> producto = buscarProductoPorNombre(item.getNombre());
+            precioUnitario = Double.valueOf(producto.get("precio").toString());
+            item.setEsCombo(false);
+            item.setComboId(null);
         }
 
+        Double subtotal = precioUnitario * item.getCantidad();
+        item.setPrecioUnitario(precioUnitario);
+        item.setSubtotal(subtotal);
+        productosConPrecio.add(item);
+        totalProductos += subtotal;
+    }
+}
         Double totalGeneral = totalEntradas + totalProductos;
-
-        // Convertir productos a JSON para guardar
         String productosJson = "[]";
         try {
             productosJson = objectMapper.writeValueAsString(productosConPrecio);
@@ -111,7 +117,7 @@ public class ReservasService {
             throw new RuntimeException("Error procesando productos");
         }
 
-        // Crear reserva
+       
         Reservas reserva = new Reservas();
         reserva.setUsuarioId(Long.valueOf(usuario.get("id").toString()));
         reserva.setFuncionId(request.getFuncionId());
@@ -158,4 +164,15 @@ public class ReservasService {
             throw new RuntimeException("El producto '" + nombre + "' no existe");
         }
     }
+
+    private Map<String, Object> obtenerCombo(String nombreCombo) {
+    try {
+        String url = "http://promociones-service:8088/api/combos/nombre/" + nombreCombo;
+        return restTemplate.getForObject(url, Map.class);
+    } catch (RestClientException e) {
+        log.warn("Combo no encontrado nombre={}", nombreCombo);
+        throw new RuntimeException("El combo '" + nombreCombo + "' no existe o no está activo");
+    }
+}
+
 }

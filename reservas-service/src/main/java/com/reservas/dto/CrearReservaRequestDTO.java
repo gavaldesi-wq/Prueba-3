@@ -21,5 +21,7 @@ public class CrearReservaRequestDTO {
     private Integer cantidadEntradas;
 
     private List<ProductoReservaDTO> productos;
+
+     private List<Long> comboIds;
 }
 

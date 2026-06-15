@@ -27,6 +27,11 @@ cd producto-service
 call .\mvnw clean package -DskipTests
 cd ..
 
+cd promociones-service
+call .\mvnw clean package -DskipTests
+cd ..
+
+
 cd api-getaway
 call .\mvnw clean package -DskipTests
 cd ..

@@ -8,5 +8,6 @@ public class ProductoReservaDTO {
     private Integer cantidad;
     private Double precioUnitario;
     private Double subtotal;
-
+    private Boolean esCombo; 
+    private Long comboId;  
 }
