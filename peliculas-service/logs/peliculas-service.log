@@ -1,22 +1,22 @@
-2026-06-07T23:56:54.010-04:00  INFO 15328 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 25.0.1 with PID 15328 (D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service\target\classes started by gabri in D:\Descargas\proyecto programacion TERMINADO-20260523T201639Z-3-001\proyecto programacion TERMINADO\peliculas-service)
-2026-06-07T23:56:54.017-04:00 DEBUG 15328 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
-2026-06-07T23:56:54.027-04:00  INFO 15328 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-06-07T23:56:55.306-04:00  INFO 15328 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-07T23:56:55.377-04:00  INFO 15328 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
-2026-06-07T23:56:55.975-04:00  INFO 15328 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-06-07T23:56:55.990-04:00  INFO 15328 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-07T23:56:55.991-04:00  INFO 15328 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
-2026-06-07T23:56:56.050-04:00  INFO 15328 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-07T23:56:56.050-04:00  INFO 15328 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1898 ms
-2026-06-07T23:56:56.177-04:00  INFO 15328 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-07T23:56:59.972-04:00  WARN 15328 --- [peliculas-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+2026-06-18T16:41:40.984-04:00  INFO 5724 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Starting PeliculasServiceApplication using Java 21.0.11 with PID 5724 (C:\Users\darkg\Prueba-3\peliculas-service\target\classes started by darkg in C:\Users\darkg\Prueba-3\peliculas-service)
+2026-06-18T16:41:40.991-04:00 DEBUG 5724 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-18T16:41:40.992-04:00  INFO 5724 --- [peliculas-service] [main] c.peliculas.PeliculasServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:41:41.566-04:00  INFO 5724 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:41:41.638-04:00  INFO 5724 --- [peliculas-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2026-06-18T16:41:42.112-04:00  INFO 5724 --- [peliculas-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-06-18T16:41:42.125-04:00  INFO 5724 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:41:42.126-04:00  INFO 5724 --- [peliculas-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-18T16:41:42.189-04:00  INFO 5724 --- [peliculas-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:41:42.191-04:00  INFO 5724 --- [peliculas-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1155 ms
+2026-06-18T16:41:42.327-04:00  INFO 5724 --- [peliculas-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:41:46.124-04:00  WARN 5724 --- [peliculas-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2026-06-07T23:56:59.975-04:00  INFO 15328 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-06-07T23:56:59.983-04:00  INFO 15328 --- [peliculas-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-06-18T16:41:46.127-04:00  INFO 5724 --- [peliculas-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-18T16:41:46.134-04:00  INFO 5724 --- [peliculas-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-06-07T23:56:59.997-04:00 ERROR 15328 --- [peliculas-service] [main] o.s.boot.SpringApplication               : Application run failed
+2026-06-18T16:41:46.151-04:00 ERROR 5724 --- [peliculas-service] [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -83,8 +83,8 @@ Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications lin
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.7.0.jar:9.7.0]
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.7.0.jar:9.7.0]
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.7.0.jar:9.7.0]
@@ -97,11 +97,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: java.net.UnknownHostException: Host desconocido (mysql)
 	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
 	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
-	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134) ~[na:na]
-	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712) ~[na:na]
-	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060) ~[na:na]
-	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702) ~[na:na]
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.7.0.jar:9.7.0]
 	... 38 common frames omitted
