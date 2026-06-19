@@ -11,7 +11,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-
+ 
   usuario-service:
     build: ./usuario-service
     ports:
@@ -19,7 +19,7 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
   sala-service:
     build: ./sala-service
     ports:
@@ -27,7 +27,7 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
   peliculas-service:
     build: ./peliculas-service
     ports:
@@ -35,7 +35,7 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
   cinefunciones-service:
     build: ./cinefunciones-service
     ports:
@@ -43,7 +43,7 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
   reservas-service:
     build: ./reservas-service
     ports:
@@ -51,7 +51,7 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
   pagos-service:
     build: ./pagos-service
     ports:
@@ -59,7 +59,7 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
   producto-service:
     build: ./producto-service
     ports:
@@ -75,7 +75,23 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-
+ 
+  comentarios-service:
+    build: ./comentarios-service
+    ports:
+      - "8091:8091"
+    depends_on:
+      mysql:
+        condition: service_healthy
+ 
+  favoritos-service:
+    build: ./favoritos-service
+    ports:
+      - "8092:8092"
+    depends_on:
+      mysql:
+        condition: service_healthy
+ 
   api-gateway:
     build: ./api-getaway
     ports:
@@ -89,3 +105,6 @@ services:
       - pagos-service
       - producto-service
       - promociones-service
+      - comentarios-service
+      - favoritos-service
+ 
