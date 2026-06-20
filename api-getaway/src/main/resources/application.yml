@@ -1,5 +1,6 @@
 server:
   port: 9090
+  forward-headers-strategy: framework
 
 spring:
   main:
@@ -11,38 +12,98 @@ spring:
           uri: http://usuario-service:8081
           predicates:
             - Path=/api/usuarios/**
-          
+
+        - id: usuarios-service-v2
+          uri: http://usuario-service:8081
+          predicates:
+            - Path=/usuarios/v2/**
+
         - id: peliculas-service
           uri: http://peliculas-service:8084
           predicates:
             - Path=/api/peliculas/**, /api/generos/**
-        
+
+        - id: peliculas-service-v2
+          uri: http://peliculas-service:8084
+          predicates:
+            - Path=/peliculas/v2/**
+
         - id: salas-service
           uri: http://sala-service:8083
           predicates:
             - Path=/api/salas/**
+
+        - id: salas-service-v2
+          uri: http://sala-service:8083
+          predicates:
+            - Path=/salas/v2/**
 
         - id: funciones-service
           uri: http://cinefunciones-service:8082
           predicates:
             - Path=/api/funciones/**
 
+        - id: funciones-service-v2
+          uri: http://cinefunciones-service:8082
+          predicates:
+            - Path=/funciones/v2/**
+
         - id: reservas-service
           uri: http://reservas-service:8085
           predicates:
             - Path=/api/reservas/**
+
+        - id: reservas-service-v2
+          uri: http://reservas-service:8085
+          predicates:
+            - Path=/reservas/v2/**
 
         - id: pagos-service
           uri: http://pagos-service:8086
           predicates:
             - Path=/api/pagos/**
 
+        - id: pagos-service-v2
+          uri: http://pagos-service:8086
+          predicates:
+            - Path=/pagos/v2/**
+
         - id: producto-service
           uri: http://producto-service:8087
           predicates:
             - Path=/api/productos/**
-            
+
+        - id: producto-service-v2
+          uri: http://producto-service:8087
+          predicates:
+            - Path=/productos/v2/**
+
         - id: promociones-service
           uri: http://promociones-service:8088
           predicates:
             - Path=/api/combos/**
+
+        - id: promociones-service-v2
+          uri: http://promociones-service:8088
+          predicates:
+            - Path=/combos/v2/**
+
+        - id: favoritos-service
+          uri: http://favoritos-service:8092
+          predicates:
+            - Path=/api/favoritos/**
+
+        - id: favoritos-service-v2
+          uri: http://favoritos-service:8092
+          predicates:
+            - Path=/favoritos/v2/**
+
+        - id: comentarios-service
+          uri: http://comentarios-service:8091
+          predicates:
+            - Path=/api/comentarios/**
+
+        - id: comentarios-service-v2
+          uri: http://comentarios-service:8091
+          predicates:
+            - Path=/comentarios/v2/**

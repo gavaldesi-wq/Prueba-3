@@ -31,6 +31,13 @@ cd promociones-service
 call .\mvnw clean package -DskipTests
 cd ..
 
+cd comentarios-service
+call .\mvnw clean package -DskipTests
+cd ..
+
+cd favoritos-service
+call .\mvnw clean package -DskipTests
+cd ..
 
 cd api-getaway
 call .\mvnw clean package -DskipTests
