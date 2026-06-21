@@ -20,6 +20,7 @@ public class XForwardedHeadersFilter implements GlobalFilter, Ordered {
                         .header("X-Forwarded-Proto", "http")
                         .header("X-Forwarded-Host", "localhost")
                         .header("X-Forwarded-Port", "9090")
+                        
                         .build())
                 .build();
 
