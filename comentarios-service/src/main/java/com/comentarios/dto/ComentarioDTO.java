@@ -6,7 +6,6 @@ import com.comentarios.model.Comentario;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,7 +26,6 @@ public class ComentarioDTO {
     @NotBlank(message = "La contraseña es obligatoria")
     private String password;
 
-    @NotNull(message = "El ID de la película es obligatorio")
     private Long peliculaId;
 
     @NotBlank(message = "El contenido del comentario es obligatorio")
