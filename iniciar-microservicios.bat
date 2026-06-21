@@ -1,47 +1,36 @@
 @echo off
-cd usuario-service
-call .\mvnw clean package -DskipTests
-cd ..
+setlocal enabledelayedexpansion
 
-cd sala-service
-call .\mvnw clean package -DskipTests
-cd ..
+set SERVICES=usuario-service sala-service peliculas-service cinefunciones-service reservas-service pagos-service producto-service promociones-service comentarios-service favoritos-service api-getaway
 
-cd peliculas-service
-call .\mvnw clean package -DskipTests
-cd ..
+for %%S in (%SERVICES%) do (
+    echo.
+    echo ===== Compilando %%S =====
+    cd %%S
+    call .\mvnw clean package -DskipTests
+    if errorlevel 1 (
+        echo.
+        echo ##### ERROR compilando %%S - ABORTANDO #####
+        cd ..
+        pause
+        exit /b 1
+    )
+    cd ..
+)
 
-cd cinefunciones-service
-call .\mvnw clean package -DskipTests
-cd ..
+echo.
+echo ===== TODOS COMPILADOS OK =====
+echo.
+echo ===== Reconstruyendo contenedores =====
+docker compose up -d --build
 
-cd reservas-service
-call .\mvnw clean package -DskipTests
-cd ..
+if errorlevel 1 (
+    echo.
+    echo ##### ERROR en docker compose up --build #####
+    pause
+    exit /b 1
+)
 
-cd pagos-service
-call .\mvnw clean package -DskipTests
-cd ..
-
-cd producto-service
-call .\mvnw clean package -DskipTests
-cd ..
-
-cd promociones-service
-call .\mvnw clean package -DskipTests
-cd ..
-
-cd comentarios-service
-call .\mvnw clean package -DskipTests
-cd ..
-
-cd favoritos-service
-call .\mvnw clean package -DskipTests
-cd ..
-
-cd api-getaway
-call .\mvnw clean package -DskipTests
-cd ..
-
-echo TODOS COMPILADOS
+echo.
+echo ===== LISTO - servicios reconstruidos y arriba =====
 pause
