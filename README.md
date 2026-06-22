@@ -5,8 +5,8 @@ Sistema de gestión para un cine, desarrollado con una arquitectura de microserv
 
 ## Integrantes
 
-- Gabriel — HATEOAS, pruebas unitarias, Swagger, Docker, microservicios de **promociones** y **pagos**.
-- [Nombre de tu compañero] — microservicios de **productos**, **comentarios** y **favoritos**.
+- Gabriel Valdes — HATEOAS, pruebas unitarias, Swagger, Docker, microservicios de **promociones** y **pagos**.
+- Benjamin Mora — microservicios de **productos**, **comentarios** y **favoritos**.
 
 ## Microservicios
 
