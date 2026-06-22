@@ -29,7 +29,7 @@ Todos los microservicios se comunican entre sí vía REST (RestTemplate), están
 
 El API Gateway corre en el puerto **9090** y centraliza el acceso a todos los microservicios.
 
-### Rutas v1 (CRUD estándar)
+### Rutas v1
 
 | Recurso | Ruta | Microservicio destino |
 |---|---|---|
@@ -44,7 +44,7 @@ El API Gateway corre en el puerto **9090** y centraliza el acceso a todos los mi
 | Favoritos | `/api/favoritos/**` | favoritos-service |
 | Comentarios | `/api/comentarios/**` | comentarios-service |
 
-### Rutas v2 (HATEOAS — solo GET)
+### Rutas v2 (HATEOAS)
 
 | Recurso | Ruta | Microservicio destino |
 |---|---|---|
