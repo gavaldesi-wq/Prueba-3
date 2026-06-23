@@ -87,6 +87,7 @@ Se implementaron pruebas unitarias (Service + Controller) con JUnit 5, Mockito y
 - comentarios-service
 - favoritos-service
 - producto-service
+- promociones-service
 
 ## Tecnologías
 
